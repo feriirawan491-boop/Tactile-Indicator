@@ -1,0 +1,111 @@
+/* Consistent heading/lead rhythm without changing the established visual style. */
+.hero-banner .eyebrow {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.hero-banner h1 {
+  margin: 0;
+  line-height: 1.06;
+}
+.hero-banner .hero-description {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 48ch;
+  margin: 24px 0 32px;
+}
+.intro-section h2 {
+  line-height: 1.08;
+  margin-bottom: 28px;
+}
+.intro-section p:not(.eyebrow) {
+  max-width: 62ch;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+.section-heading {
+  align-items: center;
+  column-gap: 56px;
+}
+.section-heading h2 {
+  line-height: 1.08;
+}
+.section-heading .eyebrow {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+.section-intro {
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 38ch;
+}
+.section-intro p {
+  line-height: inherit;
+}
+.catalog-hero > p:not(.eyebrow) {
+  max-width: 62ch;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 24px;
+}
+.category-hero p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.85;
+  margin-block: 24px;
+}
+.product-summary .detail-description {
+  line-height: 1.8;
+  margin-top: 24px;
+  max-width: 60ch;
+}
+.about-lead p {
+  line-height: 1.85;
+  max-width: 62ch;
+}
+.article-lead {
+  line-height: 1.8;
+  margin-block: 24px 28px;
+  max-width: 65ch;
+}
+.contact-hero > div > p:not(.eyebrow) {
+  line-height: 1.8;
+  max-width: 58ch;
+}
+@media (max-width: 767px) {
+  .hero-banner .eyebrow {
+    margin-bottom: 18px;
+  }
+  .hero-banner .hero-description {
+    font-size: 15px;
+    line-height: 1.85;
+    margin: 22px 0 28px;
+    max-width: 100%;
+  }
+  .intro-section h2 {
+    margin-bottom: 24px;
+  }
+  .intro-section p:not(.eyebrow) {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+  .section-heading .section-intro {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: none;
+  }
+  .catalog-hero > p:not(.eyebrow) {
+    font-size: 15px;
+    line-height: 1.85;
+    margin-top: 22px;
+  }
+  .category-hero p:not(.eyebrow) {
+    font-size: 15px;
+    line-height: 1.85;
+    margin-block: 22px;
+  }
+  .article-lead {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}

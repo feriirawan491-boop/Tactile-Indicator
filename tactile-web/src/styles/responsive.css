@@ -1,0 +1,294 @@
+@media (min-width: 1600px) {
+  .hero {
+    padding-block: 80px;
+  }
+  .tactile-study {
+    min-height: 570px;
+  }
+}
+@media (max-width: 1100px) {
+  .container {
+    width: calc(100% - 64px);
+  }
+  .desktop-nav {
+    gap: 18px;
+  }
+  .header-contact {
+    display: none;
+  }
+  .hero {
+    gap: 28px;
+  }
+  .tactile-study {
+    min-height: 460px;
+  }
+  .hero-actions {
+    gap: 10px;
+  }
+  .button {
+    padding: 12px 16px;
+    font-size: 11px;
+  }
+  .hero .eyebrow {
+    font-size: 9px;
+  }
+  .tile {
+    gap: 12px;
+    padding: 22px;
+  }
+  .tile-dots {
+    gap: 12px;
+  }
+  .faq-section {
+    gap: 32px;
+  }
+  .steps-grid {
+    gap: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+  .header-inner {
+    height: 72px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+    gap: 32px;
+  }
+  .hero h1 {
+    font-size: clamp(3.8rem, 12.8vw, 5.8rem);
+  }
+  .hero .eyebrow {
+    font-size: 9px;
+  }
+  .hero-description {
+    font-size: 14px;
+    margin-block: 20px 24px;
+  }
+  .scroll-cue {
+    margin-top: 28px;
+  }
+  .tactile-study {
+    min-height: 390px;
+  }
+  .hero-visual {
+    max-width: 540px;
+    width: 100%;
+  }
+  .tile-dots {
+    width: 63%;
+    right: 3%;
+    bottom: 12%;
+  }
+  .tile-lines {
+    width: 65%;
+    left: -5%;
+  }
+  .visual-footnote {
+    font-size: 7px;
+  }
+  .principle-strip .container {
+    font-size: 7px;
+    letter-spacing: 0.05em;
+    gap: 10px;
+    padding-block: 18px;
+  }
+  .section {
+    padding-block: 56px;
+  }
+  .intro-section,
+  .narrative {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .section-heading {
+    display: block;
+    margin-bottom: 28px;
+  }
+  .section-intro {
+    margin-top: 24px;
+  }
+  .function-grid {
+    grid-template-columns: 1fr;
+  }
+  .function-card {
+    padding: 24px;
+  }
+  .pattern-preview {
+    height: 175px;
+  }
+  .material-note {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .large-index {
+    font-size: 42px;
+  }
+  .material-note > div {
+    flex-basis: 70%;
+  }
+  .material-note > .text-link {
+    margin-left: 0;
+  }
+  .steps-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 24px;
+    margin-top: 32px;
+  }
+  .step-number {
+    font-size: 38px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+  .about-teaser {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .about-teaser > .eyebrow {
+    grid-column: auto;
+  }
+  .about-teaser p {
+    margin-top: 8px;
+  }
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+  .guide-card {
+    padding: 24px;
+  }
+  .guide-top {
+    margin-bottom: 28px;
+  }
+  .faq-section {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+    gap: 24px;
+  }
+  .accordion summary {
+    font-size: 12px;
+    gap: 10px;
+  }
+  .closing {
+    padding-block: 48px;
+  }
+  .closing-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding-block: 40px;
+  }
+  .footer-main > div:first-child {
+    grid-column: 1/-1;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .about-hero {
+    padding-block: 40px;
+  }
+  .about-hero h1 {
+    font-size: clamp(3.2rem, 11vw, 5.5rem);
+  }
+  .about-lead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .about-lead p {
+    font-size: 14px;
+  }
+  .about-study .tactile-study {
+    min-height: 280px;
+  }
+  .about-study .tile {
+    width: 60%;
+    padding: 16px;
+    gap: 12px;
+  }
+  .about-study .tile-lines {
+    left: 0;
+    top: -5%;
+  }
+  .about-study .tile-dots {
+    right: 0;
+    bottom: -5%;
+    gap: 10px;
+  }
+  .three {
+    grid-template-columns: 1fr;
+  }
+  .contact-note {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .upcoming-page {
+    padding-block: 56px 80px;
+  }
+  .draft-badge {
+    font-size: 8px;
+  }
+  .eyebrow {
+    font-size: 9px;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+  .hero h1 {
+    font-size: 3.4rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+  }
+  .tactile-study {
+    min-height: 320px;
+  }
+  .tile {
+    padding: 18px;
+    gap: 10px;
+  }
+  .tile-dots {
+    gap: 10px;
+  }
+  .principle-strip .container {
+    font-size: 6px;
+  }
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .dots-pattern {
+    grid-template-columns: repeat(7, 15px);
+    gap: 10px;
+  }
+  .dots-pattern i {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *:before,
+  *:after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

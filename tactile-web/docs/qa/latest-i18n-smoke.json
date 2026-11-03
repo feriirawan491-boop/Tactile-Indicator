@@ -1,0 +1,174 @@
+{
+  "runAt": "2026-11-03T07:15:22.063Z",
+  "checks": 42,
+  "rows": [
+    {
+      "path": "/en",
+      "status": 200
+    },
+    {
+      "path": "/en/produk?demo=1&fungsi=warning&bentuk=studs",
+      "status": 200
+    },
+    {
+      "path": "/en/faq",
+      "status": 200
+    },
+    {
+      "path": "/en/kontak",
+      "status": 200
+    },
+    {
+      "path": "/en/kebijakan-privasi",
+      "status": 200
+    },
+    {
+      "path": "/en/tentang-kami",
+      "status": 200
+    },
+    {
+      "path": "/en/panduan",
+      "status": 200
+    },
+    {
+      "path": "/en/produk",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/fungsi/guiding-block",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/fungsi/warning-block",
+      "status": 200
+    },
+    {
+      "path": "/en/panduan/perbedaan-guiding-dan-warning",
+      "status": 200
+    },
+    {
+      "path": "/en/panduan/checklist-memilih-tactile-indicator",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/material/stainless-steel?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk?demo=0",
+      "status": 200
+    },
+    {
+      "path": "/en/produk?demo=1&fungsi=guiding",
+      "status": 200
+    },
+    {
+      "path": "/en/produk?demo=1&fungsi=warning",
+      "status": 200
+    },
+    {
+      "path": "/en/produk?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk?demo=1&bentuk=studs",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/black-pineapple-tactile-studs?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/black-pineapple-tactile-guide-pins?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/oem-pineapple-tactile-studs?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/oem-stainless-steel-tactile-studs?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/precision-casting-tactile-guide-studs?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/precision-tactile-indicator-stud?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/solid-grooved-tactile-studs?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/solid-tactile-studs?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/panduan/apa-itu-tactile-indicator",
+      "status": 200
+    },
+    {
+      "path": "/en/panduan?topik=Dasar",
+      "status": 200
+    },
+    {
+      "path": "/en/panduan?topik=Fungsi",
+      "status": 200
+    },
+    {
+      "path": "/en/panduan?topik=Pemilihan",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/stainless-steel-tactile-paving-tiles?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/custom-304-tactile-studs-strips?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/custom-304-316-tactile-studs-strips?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/pineapple-tactile-studs-strips?demo=1",
+      "status": 200
+    },
+    {
+      "path": "/en/produk?demo=1&material=stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/en/produk?demo=0&fungsi=guiding",
+      "status": 200
+    },
+    {
+      "path": "/en/produk?demo=0&fungsi=warning",
+      "status": 200
+    },
+    {
+      "path": "/en/404",
+      "status": 404
+    },
+    {
+      "path": "/en/produk/missing",
+      "status": 404
+    },
+    {
+      "path": "/en/produk/material/missing",
+      "status": 404
+    },
+    {
+      "path": "/en/panduan/missing",
+      "status": 404
+    },
+    {
+      "path": "/",
+      "status": 200
+    }
+  ]
+}

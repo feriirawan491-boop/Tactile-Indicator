@@ -1,0 +1,238 @@
+{
+  "runAt": "2026-11-03T05:20:38.116Z",
+  "baseUrl": "http://127.0.0.1:3001",
+  "passed": 47,
+  "results": [
+    {
+      "route": "/",
+      "status": 200,
+      "responseMs": 102
+    },
+    {
+      "route": "/kontak",
+      "status": 200,
+      "responseMs": 30
+    },
+    {
+      "route": "/kebijakan-privasi",
+      "status": 200,
+      "responseMs": 13
+    },
+    {
+      "route": "/produk?demo=1",
+      "status": 200,
+      "responseMs": 16
+    },
+    {
+      "route": "/produk?demo=1&fungsi=guiding&bentuk=tiles",
+      "status": 200,
+      "responseMs": 12
+    },
+    {
+      "route": "/produk?demo=1&fungsi=guiding&bentuk=studs",
+      "status": 200,
+      "responseMs": 10
+    },
+    {
+      "route": "/panduan?topik=Fungsi",
+      "status": 200,
+      "responseMs": 9
+    },
+    {
+      "route": "/produk",
+      "status": 200,
+      "responseMs": 14
+    },
+    {
+      "route": "/tentang-kami",
+      "status": 200,
+      "responseMs": 12
+    },
+    {
+      "route": "/panduan",
+      "status": 200,
+      "responseMs": 12
+    },
+    {
+      "route": "/faq",
+      "status": 200,
+      "responseMs": 10
+    },
+    {
+      "route": "/produk/fungsi/guiding-block",
+      "status": 200,
+      "responseMs": 12
+    },
+    {
+      "route": "/produk/fungsi/warning-block",
+      "status": 200,
+      "responseMs": 11
+    },
+    {
+      "route": "/panduan/perbedaan-guiding-dan-warning",
+      "status": 200,
+      "responseMs": 11
+    },
+    {
+      "route": "/panduan/checklist-memilih-tactile-indicator",
+      "status": 200,
+      "responseMs": 9
+    },
+    {
+      "route": "/produk/material/stainless-steel?demo=1",
+      "status": 200,
+      "responseMs": 13
+    },
+    {
+      "route": "/produk?demo=0",
+      "status": 200,
+      "responseMs": 10
+    },
+    {
+      "route": "/produk?demo=1&fungsi=guiding",
+      "status": 200,
+      "responseMs": 11
+    },
+    {
+      "route": "/produk?demo=1&fungsi=warning",
+      "status": 200,
+      "responseMs": 13
+    },
+    {
+      "route": "/produk/stainless-steel-tactile-paving-tiles?demo=1",
+      "status": 200,
+      "responseMs": 14
+    },
+    {
+      "route": "/produk/custom-304-tactile-studs-strips?demo=1",
+      "status": 200,
+      "responseMs": 12
+    },
+    {
+      "route": "/produk/custom-304-316-tactile-studs-strips?demo=1",
+      "status": 200,
+      "responseMs": 11
+    },
+    {
+      "route": "/produk/black-pineapple-tactile-studs?demo=1",
+      "status": 200,
+      "responseMs": 12
+    },
+    {
+      "route": "/produk/black-pineapple-tactile-guide-pins?demo=1",
+      "status": 200,
+      "responseMs": 11
+    },
+    {
+      "route": "/produk/oem-pineapple-tactile-studs?demo=1",
+      "status": 200,
+      "responseMs": 30
+    },
+    {
+      "route": "/produk/oem-stainless-steel-tactile-studs?demo=1",
+      "status": 200,
+      "responseMs": 10
+    },
+    {
+      "route": "/produk/precision-casting-tactile-guide-studs?demo=1",
+      "status": 200,
+      "responseMs": 9
+    },
+    {
+      "route": "/produk/precision-tactile-indicator-stud?demo=1",
+      "status": 200,
+      "responseMs": 9
+    },
+    {
+      "route": "/produk/pineapple-tactile-studs-strips?demo=1",
+      "status": 200,
+      "responseMs": 11
+    },
+    {
+      "route": "/produk/solid-grooved-tactile-studs?demo=1",
+      "status": 200,
+      "responseMs": 8
+    },
+    {
+      "route": "/produk/solid-tactile-studs?demo=1",
+      "status": 200,
+      "responseMs": 9
+    },
+    {
+      "route": "/produk?demo=1&bentuk=tiles",
+      "status": 200,
+      "responseMs": 9
+    },
+    {
+      "route": "/produk?demo=1&bentuk=studs",
+      "status": 200,
+      "responseMs": 10
+    },
+    {
+      "route": "/panduan?topik=Dasar",
+      "status": 200,
+      "responseMs": 10
+    },
+    {
+      "route": "/panduan?topik=Pemilihan",
+      "status": 200,
+      "responseMs": 9
+    },
+    {
+      "route": "/panduan/apa-itu-tactile-indicator",
+      "status": 200,
+      "responseMs": 8
+    },
+    {
+      "route": "/produk?demo=1&material=stainless-steel",
+      "status": 200,
+      "responseMs": 11
+    },
+    {
+      "route": "/produk?demo=0&fungsi=guiding",
+      "status": 200,
+      "responseMs": 10
+    },
+    {
+      "route": "/produk?demo=0&fungsi=warning",
+      "status": 200,
+      "responseMs": 14
+    },
+    {
+      "route": "/404",
+      "status": 404
+    },
+    {
+      "route": "/tidak-ada",
+      "status": 404
+    },
+    {
+      "route": "/produk/tidak-ada",
+      "status": 404
+    },
+    {
+      "route": "/produk/fungsi/tidak-ada",
+      "status": 404
+    },
+    {
+      "route": "/produk/material/tidak-ada",
+      "status": 404
+    },
+    {
+      "route": "/produk/material/beton",
+      "status": 404
+    },
+    {
+      "route": "/produk/contoh-beton-guiding",
+      "status": 404
+    },
+    {
+      "route": "/panduan/tidak-ada",
+      "status": 404
+    }
+  ],
+  "limits": [
+    "HTTP/source QA only; browser keyboard, screen reader, visual layouts and Core Web Vitals not measured.",
+    "Preview remains noindex; WhatsApp destination checked against approved number."
+  ]
+}

@@ -1,0 +1,14 @@
+/* Keep import order: shared rules first, feature styles and overrides last. */
+@import "../styles/foundation.css";
+@import "../styles/header.css";
+@import "../styles/home.css";
+@import "../styles/layout.css";
+@import "../styles/responsive.css";
+@import "../styles/catalog.css";
+@import "../styles/detail-editorial.css";
+@import "../styles/support.css";
+@import "../styles/product-discovery.css";
+
+@import "../styles/hero-banner.css";
+@import "../styles/surface-patterns.css";
+@import "../styles/readability.css";

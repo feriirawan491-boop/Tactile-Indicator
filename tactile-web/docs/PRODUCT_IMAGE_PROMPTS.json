@@ -1,0 +1,26 @@
+{
+  "tool": "built-in image_gen",
+  "purpose": "AI illustrations, not approved inventory photos",
+  "assets": [
+    {
+      "name": "beton-guiding",
+      "prompt": "Use case: product-mockup. Create one square 1024x1024 premium industrial catalogue illustration for a tactile paving product, NOT a certification or real inventory photo. Single product centered, occupying exactly 68 percent of frame, three-quarter elevated camera looking down 45 degrees, front edge horizontal, front-right side visible. Seamless warm light gray #f3f2ef studio floor and background, soft diffuse upper-left light, restrained contact shadow falling lower right, crisp realistic surface texture, neutral minimal ecommerce art direction, all object edges fully inside generous consistent margins. No text, labels, logos, watermarks, people, environment, ruler or accessories. One isolated product only. One square pale natural gray precast concrete tactile paving tile, evenly spaced parallel raised straight elongated bars, each bar aligned front to back. Fine realistic concrete pores, substantial visible edge. Do not show dots."
+    },
+    {
+      "name": "beton-warning",
+      "prompt": "Use case: product-mockup. Create one square 1024x1024 premium industrial catalogue illustration for a tactile paving product, NOT a certification or real inventory photo. Single product centered, occupying exactly 68 percent of frame, three-quarter elevated camera looking down 45 degrees, front edge horizontal, front-right side visible. Seamless warm light gray #f3f2ef studio floor and background, soft diffuse upper-left light, restrained contact shadow falling lower right, crisp realistic surface texture, neutral minimal ecommerce art direction, all object edges fully inside generous consistent margins. No text, labels, logos, watermarks, people, environment, ruler or accessories. One isolated product only. One square pale natural gray precast concrete tactile paving tile, neat 6 by 6 grid of raised round truncated domes, fine realistic concrete pores, substantial visible edge. Do not show bars."
+    },
+    {
+      "name": "stainless-steel-guiding",
+      "prompt": "Use case: product-mockup. Create one square 1024x1024 premium industrial catalogue illustration for a tactile paving product, NOT a certification or real inventory photo. Single product centered, occupying exactly 68 percent of frame, three-quarter elevated camera looking down 45 degrees, front edge horizontal, front-right side visible. Seamless warm light gray #f3f2ef studio floor and background, soft diffuse upper-left light, restrained contact shadow falling lower right, crisp realistic surface texture, neutral minimal ecommerce art direction, all object edges fully inside generous consistent margins. No text, labels, logos, watermarks, people, environment, ruler or accessories. One isolated product only. One square satin brushed silver stainless steel tactile paving plate, parallel raised straight elongated silver bars aligned front to back, restrained realistic metallic reflection, thin visible plate edge. Do not show dots."
+    },
+    {
+      "name": "stainless-steel-warning",
+      "prompt": "Use case: product-mockup. Create one square 1024x1024 premium industrial catalogue illustration for a tactile paving product, NOT a certification or real inventory photo. Single product centered, occupying exactly 68 percent of frame, three-quarter elevated camera looking down 45 degrees, front edge horizontal, front-right side visible. Seamless warm light gray #f3f2ef studio floor and background, soft diffuse upper-left light, restrained contact shadow falling lower right, crisp realistic surface texture, neutral minimal ecommerce art direction, all object edges fully inside generous consistent margins. No text, labels, logos, watermarks, people, environment, ruler or accessories. One isolated product only. One square satin brushed silver stainless steel tactile paving plate, neat 6 by 6 grid of raised round silver truncated domes, restrained realistic metallic reflection, thin visible plate edge. Do not show bars."
+    },
+    {
+      "name": "polyurethane-warning",
+      "prompt": "Use case: product-mockup. Create one square 1024x1024 premium industrial catalogue illustration for a tactile paving product, NOT a certification or real inventory photo. Single product centered, occupying exactly 68 percent of frame, three-quarter elevated camera looking down 45 degrees, front edge horizontal, front-right side visible. Seamless warm light gray #f3f2ef studio floor and background, soft diffuse upper-left light, restrained contact shadow falling lower right, crisp realistic surface texture, neutral minimal ecommerce art direction, all object edges fully inside generous consistent margins. No text, labels, logos, watermarks, people, environment, ruler or accessories. One isolated product only. One square muted safety yellow polyurethane tactile paving tile, neat 6 by 6 grid of raised round truncated domes, matte polymer microtexture, thin visible tile edge. Do not show bars."
+    }
+  ]
+}

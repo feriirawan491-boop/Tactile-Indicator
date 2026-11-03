@@ -1,0 +1,186 @@
+/* Visible tactile motifs, shared on every page and isolated below content. */
+.surface-pattern {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+  overflow: hidden;
+  color: var(--ink);
+}
+.surface-pattern svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hero-banner .surface-pattern {
+  left: 24px;
+  bottom: 12px;
+  width: 320px;
+  height: 145px;
+  color: white;
+  opacity: 0.24;
+  mask-image: linear-gradient(90deg, #000, transparent);
+}
+.hero-banner .surface-pattern svg {
+  height: 320px;
+  transform: translateY(-80px);
+}
+.intro-section,
+.functions-section,
+.steps-section,
+.closing {
+  position: relative;
+  isolation: isolate;
+}
+.intro-section > .surface-pattern {
+  left: -12px;
+  top: 180px;
+  width: 280px;
+  height: 280px;
+  opacity: 0.24;
+  transform: rotate(180deg);
+  mask-image: linear-gradient(135deg, #000, transparent 85%);
+}
+.functions-section > .surface-pattern {
+  right: 0;
+  top: 20px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.24;
+  mask-image: linear-gradient(225deg, #000, transparent 80%);
+}
+.steps-section > .surface-pattern {
+  right: 0;
+  top: 0;
+  width: 360px;
+  height: 360px;
+  opacity: 0.28;
+  color: white;
+  transform: rotate(180deg);
+  mask-image: linear-gradient(135deg, #000, transparent 85%);
+}
+.closing > .surface-pattern {
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  height: 100%;
+  color: white;
+  opacity: 0.28;
+  mask-image: linear-gradient(270deg, #000, transparent 92%);
+}
+.closing > .surface-pattern svg {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  bottom: -80px;
+  right: -70px;
+}
+.function-card {
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.function-card:hover {
+  box-shadow: 0 10px 28px #00000008;
+}
+.function-product-image {
+  border-radius: 2px;
+}
+.principle-strip .container > span:nth-child(even) {
+  color: #a3a3a3;
+}
+@media (max-width: 767px) {
+  .hero-banner .surface-pattern {
+    width: 180px;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+    opacity: 0.2;
+  }
+  .hero-banner .surface-pattern svg {
+    height: 180px;
+    transform: translateY(-35px);
+  }
+  .intro-section > .surface-pattern {
+    display: block;
+    width: 160px;
+    height: 160px;
+    top: auto;
+    bottom: 12px;
+    left: auto;
+    right: 0;
+    opacity: 0.14;
+  }
+  .functions-section > .surface-pattern {
+    width: 180px;
+    height: 180px;
+    opacity: 0.18;
+  }
+  .steps-section > .surface-pattern {
+    width: 210px;
+    height: 210px;
+    opacity: 0.22;
+  }
+  .closing > .surface-pattern {
+    width: 220px;
+    opacity: 0.2;
+  }
+  .closing > .surface-pattern svg {
+    width: 280px;
+    height: 280px;
+    right: -100px;
+    bottom: -70px;
+  }
+}
+@media (forced-colors: active) {
+  .surface-pattern {
+    display: none;
+  }
+}
+
+/* Shared canvas: consistent placement on catalog, detail, guides, FAQ and contact. */
+.site-main {
+  position: relative;
+  isolation: isolate;
+}
+.page-patterns {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  user-select: none;
+}
+.page-patterns .page-pattern-top {
+  top: 28px;
+  right: -28px;
+  width: 340px;
+  height: 340px;
+  opacity: 0.2;
+  mask-image: linear-gradient(225deg, #000 15%, transparent 88%);
+}
+.page-patterns .page-pattern-side {
+  top: 580px;
+  left: -105px;
+  width: 380px;
+  height: 380px;
+  opacity: 0.16;
+  transform: rotate(135deg);
+  mask-image: linear-gradient(90deg, #000, transparent 95%);
+}
+@media (max-width: 767px) {
+  .page-patterns .page-pattern-top {
+    top: 16px;
+    right: -44px;
+    width: 190px;
+    height: 190px;
+    opacity: 0.18;
+  }
+  .page-patterns .page-pattern-side {
+    top: 720px;
+    left: -90px;
+    width: 250px;
+    height: 250px;
+    opacity: 0.13;
+  }
+}

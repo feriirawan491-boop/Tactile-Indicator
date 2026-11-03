@@ -1,0 +1,12 @@
+{
+  "name": "tactile-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix tactile-web run dev",
+    "build": "npm --prefix tactile-web run build",
+    "start": "npm --prefix tactile-web run start",
+    "setup": "npm --prefix tactile-web install",
+    "check": "npm --prefix tactile-web run check",
+    "test:smoke": "npm --prefix tactile-web run test:smoke"
+  }
+}
