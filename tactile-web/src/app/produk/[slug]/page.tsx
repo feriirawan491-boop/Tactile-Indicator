@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCatalog } from "@/data/catalog";
 import { isDemoQuery, demoSuffix, catalogUrl } from "@/lib/catalog";
+import { absoluteUrl } from "@/config/site";
+import { JsonLd } from "@/components/JsonLd";
 import { pageMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ProductEducation } from "@/components/product/ProductEducation";
@@ -17,9 +19,15 @@ type Props = {
 };
 async function resolve(props: Props) {
   const { slug } = await props.params;
-  const demo = isDemoQuery(await props.searchParams);
+  const query = await props.searchParams;
+  const demo = isDemoQuery(query);
   const { products } = getCatalog(demo);
-  return { demo, products, product: products.find((p) => p.slug === slug) };
+  return {
+    demo,
+    products,
+    query,
+    product: products.find((p) => p.slug === slug),
+  };
 }
 export async function generateMetadata(props: Props) {
   const { product } = await resolve(props);
@@ -34,17 +42,14 @@ export async function generateMetadata(props: Props) {
 export default async function ProductDetail(props: Props) {
   const { t: tr, href: localizeHref } = await getI18n();
 
-  const { demo, product, products } = await resolve(props);
+  const { demo, product, products, query } = await resolve(props);
   if (!product) notFound();
   const images = product.gallery?.length
     ? product.gallery
     : product.image
       ? [product.image]
       : [];
-  const url = new URL(
-    localizeHref(`/produk/${product.slug}`),
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-  ).toString();
+  const url = absoluteUrl(localizeHref(`/produk/${product.slug}`));
   const related = products
     .filter(
       (p) =>
@@ -52,9 +57,25 @@ export default async function ProductDetail(props: Props) {
         (p.functionType === product.functionType ||
           p.materialSlug === product.materialSlug),
     )
+    .sort(
+      (a, b) =>
+        Number(b.shape === product.shape) - Number(a.shape === product.shape) ||
+        Number(b.functionType === product.functionType) -
+          Number(a.functionType === product.functionType),
+    )
     .slice(0, 3);
   return (
     <div className="container">
+      <JsonLd
+        data={{
+          "@type": "Product",
+          name: tr(product.name),
+          description: tr(product.shortDescription),
+          url,
+          image: product.image ? absoluteUrl(product.image.src) : undefined,
+          material: product.materialLabel,
+        }}
+      />
       <Breadcrumbs
         label={product.name}
         parents={[{ label: "Produk", href: catalogUrl({ demo }) }]}
@@ -62,6 +83,13 @@ export default async function ProductDetail(props: Props) {
       <section className="product-detail">
         <div>
           <ProductGallery images={images} />
+          {product.imageKind === "official" && (
+            <p className="product-image-caption">
+              {tr(
+                "Foto referensi pemasok · Konfirmasikan model dan spesifikasi sebelum pemesanan.",
+              )}
+            </p>
+          )}
           {product.imageKind === "generated" && (
             <p className="product-image-caption">
               {tr(
@@ -101,7 +129,13 @@ export default async function ProductDetail(props: Props) {
               <dd>{tr("Minta penawaran")}</dd>
             </div>
           </dl>
-          <ProductInquiry product={product} url={url} />
+          <ProductInquiry
+            product={product}
+            url={url}
+            initialVariantId={
+              typeof query.model === "string" ? query.model : undefined
+            }
+          />
         </div>
       </section>
       <ProductEducation product={product} />
@@ -110,6 +144,22 @@ export default async function ProductDetail(props: Props) {
           <p className="eyebrow">{tr("01 / DATA PRODUK")}</p>
           <h2>{tr("SPESIFIKASI.")}</h2>
           <SpecTable specs={product.specs ?? []} />
+          {product.variants?.map((model) => (
+            <details className="model-data" key={model.id}>
+              <summary>{tr(model.label)}</summary>
+              <SpecTable specs={model.specs ?? []} />
+              {model.sourceUrl && (
+                <a
+                  className="text-link"
+                  href={model.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {tr("Lihat data model pada sumber")} ↗
+                </a>
+              )}
+            </details>
+          ))}
         </section>
       )}
       <section className="section detail-education">
@@ -129,8 +179,7 @@ export default async function ProductDetail(props: Props) {
             className="text-link"
             href={localizeHref(`/produk/fungsi/${product.functionType}-block`)}
           >
-            {tr("Pelajari fungsi")}
-            {tr(product.functionType)} ↗
+            {tr("Pelajari fungsi")} {tr(product.functionType)} ↗
           </Link>
           <Link
             className="text-link"
@@ -138,8 +187,7 @@ export default async function ProductDetail(props: Props) {
               `/produk/material/${product.materialSlug}${demoSuffix(demo)}`,
             )}
           >
-            {tr("Kenali material")}
-            {tr(product.materialLabel)} ↗
+            {tr("Kenali material")} {tr(product.materialLabel)} ↗
           </Link>
           <Link
             className="text-link"

@@ -1,3 +1,4 @@
+import { isPreview } from "@/config/site";
 import { getI18n } from "@/i18n/server";
 import Link from "next/link";
 import { articles } from "@/data/articles";
@@ -42,9 +43,11 @@ export default async function Guides({
             "Pahami fungsi dan siapkan pertanyaan yang tepat sebelum menentukan pilihan.",
           )}
         </p>
-        <p className="draft-badge">
-          {tr("KONTEN DRAFT · MENUNGGU REVIEW KLIEN")}
-        </p>
+        {isPreview && (
+          <p className="draft-badge">
+            {tr("KONTEN DRAFT · MENUNGGU REVIEW KLIEN")}
+          </p>
+        )}
       </section>
       <nav className="topic-nav" aria-label={tr("Topik panduan")}>
         <Link

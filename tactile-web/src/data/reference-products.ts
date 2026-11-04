@@ -45,6 +45,8 @@ const omit =
 const clean = (value: string) =>
   value
     .replace(/<[^>]*>/g, " ")
+    .replace(/(\d)mm\s*[x×]\s*(\d)/gi, "$1 mm × $2")
+    .replace(/,(?=\S)/g, ", ")
     .replace(/\s+/g, " ")
     .trim();
 const labelOf = (value: string) => labels[value.replace(/:$/, "")] ?? value;

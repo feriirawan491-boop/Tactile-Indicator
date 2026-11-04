@@ -12,7 +12,8 @@
     "format": "prettier --write src tests scripts next.config.ts eslint.config.mjs",
     "test:smoke": "node scripts/smoke.mjs",
     "check": "npm run lint && npm run typecheck && npm test && npm run build",
-    "test:i18n": "node scripts/smoke-i18n.mjs"
+    "test:i18n": "node scripts/smoke-i18n.mjs",
+    "test:audit": "node --experimental-strip-types scripts/audit-release.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

@@ -1,0 +1,77 @@
+{
+  "runAt": "2026-11-04T03:52:19.344Z",
+  "base": "http://127.0.0.1:3104",
+  "checks": [
+    {
+      "route": "/",
+      "responsiveWidths": [
+        320,
+        375,
+        768,
+        1024,
+        1440
+      ],
+      "fonts": "\"Bebas Neue\", \"Bebas Neue Fallback\", \"Arial Narrow\", Impact, sans-serif",
+      "axeViolations": 0
+    },
+    {
+      "route": "/produk",
+      "responsiveWidths": [
+        320,
+        375,
+        768,
+        1024,
+        1440
+      ],
+      "fonts": "\"Bebas Neue\", \"Bebas Neue Fallback\", \"Arial Narrow\", Impact, sans-serif",
+      "axeViolations": 0
+    },
+    {
+      "route": "/produk/stud-pola-nanas-stainless-steel",
+      "responsiveWidths": [
+        320,
+        375,
+        768,
+        1024,
+        1440
+      ],
+      "fonts": "\"Bebas Neue\", \"Bebas Neue Fallback\", \"Arial Narrow\", Impact, sans-serif",
+      "axeViolations": 0
+    },
+    {
+      "route": "/faq",
+      "responsiveWidths": [
+        320,
+        375,
+        768,
+        1024,
+        1440
+      ],
+      "fonts": "\"Bebas Neue\", \"Bebas Neue Fallback\", \"Arial Narrow\", Impact, sans-serif",
+      "axeViolations": 0
+    },
+    {
+      "route": "/en/produk/stud-strip-stainless-steel",
+      "responsiveWidths": [
+        320,
+        375,
+        768,
+        1024,
+        1440
+      ],
+      "fonts": "\"Bebas Neue\", \"Bebas Neue Fallback\", \"Arial Narrow\", Impact, sans-serif",
+      "axeViolations": 0
+    },
+    {
+      "keyboard": "menu and filter Escape/focus return passed"
+    },
+    {
+      "inquiry": "model, grade and finish included; model change resets previous choices"
+    },
+    {
+      "noJavaScript": "catalogue photos and model specifications available"
+    }
+  ],
+  "violations": [],
+  "browserErrors": []
+}

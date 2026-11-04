@@ -45,8 +45,14 @@ while (queue.length) {
   assert.ok(/<title>[^<]+<\/title>/.test(html), `${route}: title`);
   assert.ok(meta(html, "description"), `${route}: description`);
   assert.ok(
-    meta(html, "robots")?.includes("noindex"),
-    `${route}: draft must stay noindex`,
+    meta(html, "robots")?.includes(
+      new URL(route, base).pathname.startsWith("/panduan/") ||
+        route === "/kebijakan-privasi" ||
+        process.env.EXPECT_NOINDEX === "true"
+        ? "noindex"
+        : "index",
+    ),
+    `${route}: environment and content index policy`,
   );
   assert.ok(
     html.includes('href="/kebijakan-privasi"'),
@@ -136,7 +142,7 @@ const report = {
   results,
   limits: [
     "HTTP/source QA only; browser keyboard, screen reader, visual layouts and Core Web Vitals not measured.",
-    "Preview remains noindex; WhatsApp destination checked against approved number.",
+    "Preview and unapproved articles/privacy remain noindex; public production pages indexable.",
   ],
 };
 await mkdir("docs/qa", { recursive: true });

@@ -36,7 +36,7 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "Apakah ukuran dan warna sudah tersedia?",
         answer:
-          "Ukuran dan warna resmi belum dikonfirmasi. Pilihan pada mode contoh hanya untuk menguji antarmuka, bukan varian yang dinyatakan dijual.",
+          "Ukuran dan finishing berbeda menurut model. Pilih model pada halaman produk untuk membaca data sumber, lalu konfirmasikan ketersediaan dan spesifikasi pesanan.",
         link: { label: "Buka katalog", href: "/produk" },
       },
     ],

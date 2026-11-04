@@ -10,7 +10,7 @@ import { WhatsAppCTA } from "@/components/conversion/WhatsAppCTA";
 import { faqs, steps } from "@/data/home";
 export async function generateMetadata() {
   return pageMetadata(
-    "Jalur yang lebih terarah",
+    "Tactile Indicator Stainless Steel untuk Aksesibilitas",
     "Kenali tactile indicator berpola garis dan titik, fungsi dan pertimbangan pemilihannya.",
   );
 }
@@ -199,12 +199,14 @@ export default async function Home() {
           </p>
         </SectionHeading>
         <div className="material-note">
-          <span className="large-index">{tr("M /")}</span>
+          <span className="large-index" aria-hidden="true">
+            03 /
+          </span>
           <div>
             <h3>{tr("Stainless steel untuk berbagai bentuk.")}</h3>
             <p>
               {tr(
-                "Kenali pelat modular, studs bulat, serta kombinasi studs dan strips. Pilihan grade 304/316 mengikuti listing; sesuaikan dimensi, finishing, dan pemasangan dengan kebutuhan proyek.",
+                "Kenali pelat modular, studs bulat, serta kombinasi studs dan strips. Grade 304 atau 316 tergantung model produk; sesuaikan dimensi, finishing, dan pemasangan dengan kebutuhan proyek.",
               )}
             </p>
           </div>

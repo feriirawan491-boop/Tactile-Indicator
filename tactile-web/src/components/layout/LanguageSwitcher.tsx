@@ -6,14 +6,16 @@ import { localeHref, type Locale } from "@/i18n/core";
 export function LanguageSwitcher() {
   const { locale } = useI18n();
   const pathname = usePathname();
-  const search = useSearchParams().toString();
+  const params = new URLSearchParams(useSearchParams().toString());
+  params.delete("demo");
+  const search = params.toString();
   function navigate(event: MouseEvent<HTMLAnchorElement>, target: Locale) {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
       return;
     event.preventDefault();
     window.location.assign(
       localeHref(window.location.pathname, target) +
-        window.location.search +
+        (search ? `?${search}` : "") +
         window.location.hash,
     );
   }

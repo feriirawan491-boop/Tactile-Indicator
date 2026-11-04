@@ -8,6 +8,7 @@ export async function generateMetadata() {
     "Informasi privasi — draft",
     "Ringkasan fitur frontend dan layanan eksternal untuk review kebijakan privasi sebelum publikasi.",
     "/kebijakan-privasi",
+    { draft: true },
   );
 }
 export default async function Privacy() {
@@ -30,7 +31,7 @@ export default async function Privacy() {
           <p className="privacy-updated">
             {tr("Pembaruan draft:")}
             {tr(" ")}
-            <time dateTime={privacyDraft.updated}>{tr("3 November 2026")}</time>
+            <time dateTime={privacyDraft.updated}>{tr("4 November 2026")}</time>
           </p>
         </header>
         {privacyDraft.sections.map((s) => (

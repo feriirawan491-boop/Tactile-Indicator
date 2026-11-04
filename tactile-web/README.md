@@ -1,74 +1,59 @@
-# Tactile Indicator — frontend lokal
+# Tactile Indicator
 
-Implementasi PRD fase **0–12**, terpisah dari dokumen sumber di direktori induk.
+Frontend katalog tactile indicator berbahasa Indonesia/Inggris dengan inquiry WhatsApp. Menggunakan Next.js App Router, TypeScript dan komponen React. Tidak ada checkout, CMS, akun pelanggan atau penyimpanan lead.
 
 ## Menjalankan
 
-Gunakan Node.js 22.18+ dan npm agar aplikasi serta tes TypeScript native dapat dijalankan.
+Gunakan Node.js 22.18+ dan npm.
 
 ```sh
-cd tactile-web
 npm install
 cp .env.example .env.local
 npm run dev
 ```
 
-Buka **http://localhost:3000**. Build produksi lokal: `npm run build` lalu `npm start`.
+Buka http://localhost:3000. Build produksi: `npm run build`, lalu `npm start`. Development memakai `.next-local`, build produksi memakai `.next` agar compiler terpisah.
 
-## Peta source
+## Kondisi terbaru — 4 November 2026
 
-- `src/app/`: routing App Router, metadata dan komposisi halaman.
-- `src/components/layout/`: header, dialog navigasi, footer, breadcrumb.
-- `src/components/ui/`: komponen presentasi bersama.
-- `src/components/home/`: ilustrasi pola yang jelas berlabel skematis.
-- `src/components/conversion/`: satu pintu CTA WhatsApp.
-- `src/styles/`: stylesheet terpisah menurut fondasi, layout, dan fitur; urutan import di globals.css.
-- `src/config/`: identitas, konfigurasi publik, navigasi, status fase.
-- `src/data/`: copy dan data tampilan.
-- `src/types/`: kontrak data TypeScript.
-- `src/lib/`: helper URL WhatsApp dan metadata.
-- `docs/`: status fase, keputusan implementasi, dan handoff.
+37 listing ABLinox disusun menjadi 9 keluarga produk dengan 37 model. Nama Indonesia/Inggris tersedia; setiap model mempertahankan spesifikasi, foto referensi dan URL sumber. Model, grade serta finishing dapat dibawa ke pesan WhatsApp. Seluruh URL listing lama dialihkan ke keluarga dan model yang sesuai. Katalog ini masih referensi pemasok, bukan pernyataan approval inventaris atau stok lokal.
+
+Lihat [laporan implementasi audit](docs/AUDIT_IMPLEMENTATION_2026-11-04.md) untuk pemetaan model, perubahan, hasil QA dan kebutuhan konten. Dokumen fase/handoff sebelumnya adalah riwayat implementasi.
+
+## Konfigurasi
+
+- `NEXT_PUBLIC_SITE_URL`: origin HTTPS publik untuk canonical, sitemap, preview sosial dan URL WhatsApp. Default production `https://tactile-indicator.vercel.app`; localhost ditolak di production.
+- `NEXT_PUBLIC_WHATSAPP_NUMBER`: nomor internasional tanpa `+`; `NEXT_PUBLIC_WHATSAPP_APPROVED=true` mengaktifkan link yang valid.
+- `NEXT_PUBLIC_CATALOG_DEMO=true`: katalog referensi. `false` memakai inventaris approved di `src/data/catalog.ts`, yang saat ini masih kosong. Override URL hanya tersedia pada preview; URL publik tidak memakai flag demo.
+- `SITE_INDEXABLE=false`: menahan indexing production. Development/Vercel preview selalu noindex. Artikel belum disetujui dan privasi draft tetap noindex terlepas dari environment.
+- `NEXT_PUBLIC_COMPANY_*`: identitas, alamat, email dan jam operasional yang telah diverifikasi; set `NEXT_PUBLIC_COMPANY_APPROVED=true` hanya setelah review. Organization schema ditampilkan jika legal name dan approval tersedia.
+
+Perubahan environment memerlukan restart/build ulang. Google Fonts disajikan lokal melalui next/font. Foto produk referensi tersimpan lokal; tautan sumber membuka pemasok hanya ketika dipilih. Preview sosial dibuat sebagai PNG 1200×630 di `/share`.
 
 ## Pemeriksaan
 
 ```sh
-npm run lint
-npm run typecheck
-npm test
-npm run build
-npm run test:smoke # perlu server aktif
+npm run check
+# Server produksi terpisah untuk QA:
+npm run start -- --port 3104
+# Di terminal lain:
+BASE_URL=http://127.0.0.1:3104 npm run test:smoke
+BASE_URL=http://127.0.0.1:3104 npm run test:i18n
+BASE_URL=http://127.0.0.1:3104 npm run test:audit
 ```
 
-## Konfigurasi konten
+Smoke test default menguji indexing production. Untuk server development/preview gunakan `EXPECT_NOINDEX=true` pada test:smoke. Pengujian HTTP dibatasi ke localhost. Bukti tersimpan di `docs/qa/`.
 
-Identitas sementara terpusat di `src/config/company.ts`. Jangan mengisi data yang belum disetujui. Untuk mengaktifkan WhatsApp, isi `NEXT_PUBLIC_WHATSAPP_NUMBER` dengan nomor internasional tanpa `+` dan set `NEXT_PUBLIC_WHATSAPP_APPROVED=true` di `.env.local`, lalu restart/build ulang. URL dibentuk oleh `getWhatsAppUrl` dan hanya tersedia jika konfigurasi valid. Klik tautan membuka WhatsApp; tidak mengirim pesan otomatis.
+## Peta source
 
-Pratinjau memakai `noindex`. Setelah konten disetujui, developer perlu memperbarui robots di layout dan `NEXT_PUBLIC_SITE_URL` dengan domain resmi. Google Fonts dimuat melalui CSS dengan fallback lokal; tanpa internet aplikasi tetap memakai font fallback.
+- `src/app/`: route publik ID dan `/en`, metadata, sitemap, robots dan gambar sosial.
+- `src/data/core-products.ts`: keluarga/model dan migrasi slug.
+- `src/data/references/ablinox/products.json`: arsip sumber 37 listing.
+- `src/config/`: origin, identitas, kontak dan pengaturan katalog.
+- `src/components/`: layout, katalog, filter, galeri, tabel, inquiry dan konten.
+- `src/lib/`: filter/URL, SEO, pagination dan builder WhatsApp.
+- `src/i18n/`: kamus ID/EN; slug yang sama dipertahankan di bawah `/en`.
+- `public/images/products/ablinox/`: foto referensi pemasok, tanpa menghapus watermark.
+- `docs/`: audit, hasil verifikasi dan riwayat fase.
 
-Fase 4–6 tersedia: katalog, kategori fungsi, dan template kategori material. Buka `/produk?demo=1` untuk mencoba 5 kartu fixture dan 3 material contoh. Katalog resmi tetap kosong sampai data disetujui. Detail produk, tiga panduan draft, dan FAQ berkelompok kini tersedia. Halaman kontak, draft privasi, dan pemulihan error kini tersedia. Featured product dan bukti perusahaan tetap menunggu data resmi. Tidak ada backend, checkout, atau penyimpanan lead. Lihat [catatan fase 4–6](docs/PHASE_04_06.md) dan [fase 7–9](docs/PHASE_07_09.md).
-
-## Rilis dan handoff akhir
-
-Lihat [RELEASE_HANDOFF.md](docs/RELEASE_HANDOFF.md) untuk matriks route, perintah pemeriksaan, hasil regresi, known issues, dan gate sebelum publikasi. `npm run check` menjalankan seluruh check statis, tes, dan build. Implementasi lokal tersedia; sign-off publik masih menunggu konten resmi dan QA browser.
-
-## Pembaruan visual produk
-
-Katalog lokal otomatis membuka pratinjau bila inventaris resmi kosong. Gunakan `/produk?demo=0` untuk data resmi saja. Lima gambar AI dan informasi pemilihan kini tersedia; lihat [catatan UI/UX dan aset](docs/PRODUCT_UX_UPDATE.md). Gambar bukan foto produk resmi.
-
-
-## Katalog 12 listing — pembaruan terbaru
-
-Katalog kini mengikuti 12 listing dari pengguna, memakai enam visual keluarga produk hasil ImageGen tanpa foto/atribusi pemasok pada tampilan. Ada filter bentuk dan fungsi campuran. Validasi terbaru: 13 tes, 47 URL produksi lulus. Lihat [CATALOG_12_HANDOFF.md](docs/CATALOG_12_HANDOFF.md). Catatan dataset/foto referensi sebelumnya adalah riwayat implementasi.
-
-## Data dummy default
-
-Katalog, kategori fungsi, material, dan detail kini otomatis memakai data contoh yang relevan. Tidak perlu menambahkan `?demo=1`. Konfigurasi berada di `src/config/catalog.ts`; set `NEXT_PUBLIC_CATALOG_DEMO=false` setelah inventaris resmi siap. `?demo=0` tetap tersedia sebagai override eksplisit. Gambar dan informasi contoh tetap berlabel.
-
-
-## Indonesia / English
-
-Pilihan ID/EN tersedia pada header dan menu mobile; English dapat diakses melalui `/en`. Locale bertahan pada navigasi dan filter. Lint, TS/build, 18 tests, serta 47 URL Indonesia dan 42 bilingual lulus. Lihat [panduan multilingual](docs/MULTILINGUAL.md).
-
-## Cache development
-
-`npm run dev` menggunakan `.next-local`; build/start produksi menggunakan `.next`. Pemisahan ini menjaga dev compiler tidak terganggu saat pemeriksaan build dijalankan. Setelah pergantian struktur route, jika browser masih menampilkan overlay dari file yang sudah dihapus, lakukan hard reload Cmd+Shift+R setelah server dimulai ulang.
+Identitas usaha, approval produk, sertifikasi, ketentuan pemesanan, portofolio dan kebijakan privasi final masih memerlukan data pemilik. Tidak mengarang klaim atau mengganti status persetujuan data hanya karena tampilan sudah diperbaiki.

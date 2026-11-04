@@ -3,7 +3,6 @@ import { useI18n } from "@/i18n/client";
 
 import { useState } from "react";
 import Image from "next/image";
-import { ImageLoading } from "@/components/feedback/ImageLoading";
 export function ProductGallery({
   images,
 }: {
@@ -13,21 +12,19 @@ export function ProductGallery({
 
   const [selected, setSelected] = useState(0),
     [failed, setFailed] = useState<string[]>([]);
-  const [loaded, setLoaded] = useState<string[]>([]);
   const image = images[selected];
   return (
     <div className="product-gallery">
       <div className="gallery-main">
         {image && !failed.includes(image.src) ? (
           <>
-            {!loaded.includes(image.src) && <ImageLoading />}
             <Image
               key={image.src}
               src={image.src}
               alt={tr(image.alt)}
               fill
+              preload
               sizes="(max-width: 767px) 100vw, 55vw"
-              onLoad={() => setLoaded((old) => [...old, image.src])}
               onError={() => setFailed((old) => [...old, image.src])}
             />
           </>

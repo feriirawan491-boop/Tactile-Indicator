@@ -1,4 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { legacyProductRoutes } from "@/data/core-products";
+import { isPreview } from "@/config/site";
 import { getCatalog } from "@/data/catalog";
 import { functionCategories } from "@/data/function-categories";
 import { articles } from "@/data/articles";
@@ -9,7 +11,26 @@ export function proxy(request: NextRequest) {
   const locale =
     original === "/en" || original.startsWith("/en/") ? "en" : "id";
   const path = stripLocalePath(original);
+  const target = request.nextUrl.clone();
+  let redirect = false;
+  if (
+    target.searchParams.has("demo") &&
+    (!isPreview || target.searchParams.get("demo") === "1")
+  ) {
+    target.searchParams.delete("demo");
+    redirect = true;
+  }
+  const legacy = /^\/produk\/([^/]+)$/.exec(path);
+  const mapping =
+    legacy && legacyProductRoutes.find((p) => p.slug === legacy[1]);
+  if (mapping) {
+    target.pathname = `${locale === "en" ? "/en" : ""}/produk/${mapping.target}`;
+    target.searchParams.set("model", mapping.model);
+    redirect = true;
+  }
+  if (redirect) return NextResponse.redirect(target, 301);
   const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-tactile-path", path);
   requestHeaders.set("x-tactile-locale", locale);
   const parts = path.split("/").filter(Boolean),
     values = request.nextUrl.searchParams.getAll("demo");
@@ -44,5 +65,7 @@ export function proxy(request: NextRequest) {
   return NextResponse.next({ status, request: { headers: requestHeaders } });
 }
 export const config = {
-  matcher: ["/((?!_next/|images/|favicon.ico|icon.svg).*)"],
+  matcher: [
+    "/((?!_next/|images/|fonts/|share|sitemap.xml|robots.txt|favicon.ico|icon.svg).*)",
+  ],
 };

@@ -75,11 +75,9 @@ while (queue.length) {
     queue.push(next.pathname + next.search);
   }
   if (path === "/en/produk?demo=1&fungsi=warning&bentuk=studs") {
-    assert.equal([...html.matchAll(/class="product-card"/g)].length, 8);
+    assert.equal([...html.matchAll(/class="product-card"/g)].length, 5);
     assert.ok(
-      html.includes(
-        'href="/produk?demo=1&amp;fungsi=warning&amp;bentuk=studs"',
-      ),
+      html.includes('href="/produk?fungsi=warning&amp;bentuk=studs"'),
       "ID switch preserves filters",
     );
     assert.ok(html.includes('action="/en/produk"'));

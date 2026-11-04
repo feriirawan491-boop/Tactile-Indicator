@@ -1,6 +1,6 @@
 {
-  "runAt": "2026-11-03T07:15:22.063Z",
-  "checks": 42,
+  "runAt": "2026-11-04T03:51:21.394Z",
+  "checks": 36,
   "rows": [
     {
       "path": "/en",
@@ -51,59 +51,43 @@
       "status": 200
     },
     {
-      "path": "/en/produk/material/stainless-steel?demo=1",
+      "path": "/en/produk?fungsi=warning&bentuk=studs",
       "status": 200
     },
     {
-      "path": "/en/produk?demo=0",
+      "path": "/en/produk/material/stainless-steel",
       "status": 200
     },
     {
-      "path": "/en/produk?demo=1&fungsi=guiding",
+      "path": "/en/produk?fungsi=guiding",
       "status": 200
     },
     {
-      "path": "/en/produk?demo=1&fungsi=warning",
+      "path": "/en/produk?fungsi=warning",
       "status": 200
     },
     {
-      "path": "/en/produk?demo=1",
+      "path": "/en/produk?bentuk=studs",
       "status": 200
     },
     {
-      "path": "/en/produk?demo=1&bentuk=studs",
+      "path": "/en/produk/stud-pola-nanas-stainless-steel",
       "status": 200
     },
     {
-      "path": "/en/produk/black-pineapple-tactile-studs?demo=1",
+      "path": "/en/produk/stud-stainless-steel",
       "status": 200
     },
     {
-      "path": "/en/produk/black-pineapple-tactile-guide-pins?demo=1",
+      "path": "/en/produk/stud-alur-stainless-steel",
       "status": 200
     },
     {
-      "path": "/en/produk/oem-pineapple-tactile-studs?demo=1",
+      "path": "/en/produk/stud-spiral-stainless-steel",
       "status": 200
     },
     {
-      "path": "/en/produk/oem-stainless-steel-tactile-studs?demo=1",
-      "status": 200
-    },
-    {
-      "path": "/en/produk/precision-casting-tactile-guide-studs?demo=1",
-      "status": 200
-    },
-    {
-      "path": "/en/produk/precision-tactile-indicator-stud?demo=1",
-      "status": 200
-    },
-    {
-      "path": "/en/produk/solid-grooved-tactile-studs?demo=1",
-      "status": 200
-    },
-    {
-      "path": "/en/produk/solid-tactile-studs?demo=1",
+      "path": "/en/produk/stud-ulir-stainless-steel",
       "status": 200
     },
     {
@@ -123,31 +107,23 @@
       "status": 200
     },
     {
-      "path": "/en/produk/stainless-steel-tactile-paving-tiles?demo=1",
+      "path": "/en/produk/pelat-tactile-stainless-steel",
       "status": 200
     },
     {
-      "path": "/en/produk/custom-304-tactile-studs-strips?demo=1",
+      "path": "/en/produk/stud-strip-stainless-steel",
       "status": 200
     },
     {
-      "path": "/en/produk/custom-304-316-tactile-studs-strips?demo=1",
+      "path": "/en/produk/stud-strip-pola-nanas",
       "status": 200
     },
     {
-      "path": "/en/produk/pineapple-tactile-studs-strips?demo=1",
+      "path": "/en/produk/strip-pola-nanas-stainless-steel",
       "status": 200
     },
     {
-      "path": "/en/produk?demo=1&material=stainless-steel",
-      "status": 200
-    },
-    {
-      "path": "/en/produk?demo=0&fungsi=guiding",
-      "status": 200
-    },
-    {
-      "path": "/en/produk?demo=0&fungsi=warning",
+      "path": "/en/produk?material=stainless-steel",
       "status": 200
     },
     {

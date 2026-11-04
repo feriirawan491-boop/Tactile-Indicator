@@ -109,3 +109,74 @@
     line-height: 1.8;
   }
 }
+
+/* Source models retain their dimensions and optional inquiry context. */
+.variant-selector select {
+  width: 100%;
+  min-height: 48px;
+  font: inherit;
+  padding: 10px;
+  background: #fff;
+  color: #0a0a0a;
+  border: 1px solid #737373;
+}
+.variant-specs {
+  margin-block: 24px;
+}
+.variant-specs h2 {
+  font-family: var(--body);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.variant-specs .product-media {
+  max-width: 240px;
+  aspect-ratio: 1;
+  margin-block: 16px;
+}
+.variant-specs table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.variant-specs th,
+.variant-specs td {
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  overflow-wrap: anywhere;
+  vertical-align: top;
+}
+.variant-specs th {
+  width: 42%;
+}
+.gallery-thumbnails {
+  flex-wrap: wrap;
+}
+.product-image-caption {
+  line-height: 1.6;
+}
+
+.model-option {
+  display: grid;
+  gap: 6px;
+  margin-block: 16px;
+}
+.model-option select {
+  width: 100%;
+  min-height: 48px;
+  font: inherit;
+  padding: 10px;
+  background: white;
+  color: var(--ink);
+  border: 1px solid #737373;
+}
+
+.model-data {
+  border-bottom: 1px solid var(--border);
+  padding-block: 16px;
+}
+.model-data summary {
+  cursor: pointer;
+  min-height: 44px;
+  font-weight: 600;
+}

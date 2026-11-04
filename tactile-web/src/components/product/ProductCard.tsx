@@ -23,7 +23,10 @@ export async function ProductCard({
       data-shape={product.shape}
       data-material={product.materialSlug}
     >
-      <Link href={localizeHref(`/produk/${product.slug}${demoSuffix(demo)}`)}>
+      <Link
+        href={localizeHref(`/produk/${product.slug}${demoSuffix(demo)}`)}
+        aria-label={`${tr("Lihat detail")} ${tr(product.name)}`}
+      >
         <div className="product-card-visual">
           <ProductImage image={product.image} />
           {product.imageKind === "generated" && (

@@ -1,18 +1,31 @@
 import { getI18n } from "@/i18n/server";
 import { I18nProvider } from "@/i18n/client";
 import type { Metadata } from "next";
+import { siteUrl, siteIndexable } from "@/config/site";
+import { Bebas_Neue, Plus_Jakarta_Sans } from "next/font/google";
+const displayFont = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+const bodyFont = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
+import { company } from "@/config/company";
+import { JsonLd } from "@/components/JsonLd";
 import { SurfacePattern } from "@/components/ui/SurfacePattern";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import "./globals.css";
 const baseMetadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-  ),
+  metadataBase: new URL(siteUrl),
   title: { default: "Tactile Indicator", template: "%s | Tactile Indicator" },
   description:
     "Kenali tactile indicator, fungsi guiding dan warning, serta pertimbangan pemilihan untuk kebutuhan jalur Anda.",
-  robots: { index: false, follow: false },
+  robots: { index: siteIndexable, follow: true },
 };
 export async function generateMetadata(): Promise<Metadata> {
   const { t: tr } = await getI18n();
@@ -28,8 +41,30 @@ export default async function RootLayout({
     <html lang={locale} data-scroll-behavior="smooth">
       {/* Browser extensions may inject body attributes before hydration.
           Suppression is limited to this element; descendants remain checked. */}
-      <body suppressHydrationWarning>
+      <body
+        className={`${displayFont.variable} ${bodyFont.variable}`}
+        suppressHydrationWarning
+      >
         <I18nProvider locale={locale}>
+          <JsonLd
+            data={{
+              "@type": "WebSite",
+              name: company.displayName,
+              url: siteUrl,
+              inLanguage: ["id", "en"],
+            }}
+          />
+          {company.approved && company.legalName && (
+            <JsonLd
+              data={{
+                "@type": "Organization",
+                name: company.legalName,
+                url: siteUrl,
+                ...(company.email ? { email: company.email } : {}),
+                ...(company.address ? { address: company.address } : {}),
+              }}
+            />
+          )}
           <a href="#main-content" className="skip-link">
             {tr("Lewati ke konten")}
           </a>

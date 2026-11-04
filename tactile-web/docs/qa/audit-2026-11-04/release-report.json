@@ -1,0 +1,115 @@
+{
+  "runAt": "2026-11-04T03:54:05.760Z",
+  "redirects": 74,
+  "pageChecks": 26,
+  "robots": "passed",
+  "sitemap": "passed",
+  "socialPng": "passed",
+  "draftIndexPolicy": "passed",
+  "results": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/produk",
+      "status": 200
+    },
+    {
+      "path": "/faq",
+      "status": 200
+    },
+    {
+      "path": "/kontak",
+      "status": 200
+    },
+    {
+      "path": "/produk/pelat-tactile-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/produk/stud-strip-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/produk/stud-strip-pola-nanas",
+      "status": 200
+    },
+    {
+      "path": "/produk/stud-pola-nanas-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/produk/stud-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/produk/stud-alur-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/produk/stud-spiral-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/produk/strip-pola-nanas-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/produk/stud-ulir-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/en/",
+      "status": 200
+    },
+    {
+      "path": "/en/produk",
+      "status": 200
+    },
+    {
+      "path": "/en/faq",
+      "status": 200
+    },
+    {
+      "path": "/en/kontak",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/pelat-tactile-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/stud-strip-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/stud-strip-pola-nanas",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/stud-pola-nanas-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/stud-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/stud-alur-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/stud-spiral-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/strip-pola-nanas-stainless-steel",
+      "status": 200
+    },
+    {
+      "path": "/en/produk/stud-ulir-stainless-steel",
+      "status": 200
+    }
+  ]
+}

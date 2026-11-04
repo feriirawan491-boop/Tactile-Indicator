@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 export async function generateMetadata() {
   return pageMetadata(
     "Hubungi kami",
-    "Siapkan kebutuhan tactile indicator dan temukan informasi kontak perusahaan yang telah disetujui.",
+    "Diskusikan pilihan tactile indicator, kebutuhan jumlah, dan spesifikasi proyek melalui WhatsApp.",
     "/kontak",
   );
 }

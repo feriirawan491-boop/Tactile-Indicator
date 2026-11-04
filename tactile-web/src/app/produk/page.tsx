@@ -44,6 +44,8 @@ export default async function Catalog({
     ["bentuk", filters.bentuk ?? ""],
     ["material", filters.material],
     ["q", filters.q],
+    ["grade", filters.grade ?? ""],
+    ["finishing", filters.finishing ?? ""],
   ].filter(([, v]) => v);
   return (
     <div className="container">
@@ -79,6 +81,11 @@ export default async function Catalog({
           ))}
         </div>
       </section>
+      <p className="category-copy">
+        {tr(
+          "Katalog ini mengelompokkan model referensi pemasok. Foto dan spesifikasi perlu dikonfirmasi untuk pesanan Anda.",
+        )}
+      </p>
       <ProductChooser demo={demo} materials={materials} />
       <div className="catalog-layout">
         <ProductFilters

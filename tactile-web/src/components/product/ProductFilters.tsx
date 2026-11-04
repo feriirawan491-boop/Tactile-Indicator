@@ -18,7 +18,7 @@ function FilterForm({
 
   return (
     <form action={localizeHref("/produk")} method="get" className="filter-form">
-      <input type="hidden" name="demo" value={filters.demo ? "1" : "0"} />
+      {!filters.demo && <input type="hidden" name="demo" value="0" />}
       <label htmlFor={`${id}-q`}>
         {tr("Cari produk")}
         <input
@@ -71,6 +71,45 @@ function FilterForm({
           </select>
         </label>
       )}
+      <label htmlFor={`${id}-grade`}>
+        {tr("Grade pada sumber")}
+        <select
+          id={`${id}-grade`}
+          name="grade"
+          defaultValue={filters.grade ?? ""}
+        >
+          <option value="">{tr("Semua grade")}</option>
+          {["304", "316", "316L"].map((g) => (
+            <option key={g} value={g}>
+              {g}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label htmlFor={`${id}-finishing`}>
+        {tr("Finishing pada sumber")}
+        <select
+          id={`${id}-finishing`}
+          name="finishing"
+          defaultValue={filters.finishing ?? ""}
+        >
+          <option value="">{tr("Semua finishing")}</option>
+          <option value="black">{tr("Hitam")}</option>
+          <option value="natural">Natural</option>
+        </select>
+      </label>
+      <label htmlFor={`${id}-urutan`}>
+        {tr("Urutkan")}
+        <select
+          id={`${id}-urutan`}
+          name="urutan"
+          defaultValue={filters.urutan ?? ""}
+        >
+          <option value="">{tr("Pilihan katalog")}</option>
+          <option value="az">{tr("Nama A–Z")}</option>
+          <option value="za">{tr("Nama Z–A")}</option>
+        </select>
+      </label>
       <button className="button" type="submit">
         {tr("Terapkan filter")}
       </button>

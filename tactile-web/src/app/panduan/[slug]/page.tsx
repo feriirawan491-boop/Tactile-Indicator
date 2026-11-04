@@ -1,3 +1,5 @@
+import { JsonLd } from "@/components/JsonLd";
+import { absoluteUrl } from "@/config/site";
 import { getI18n } from "@/i18n/server";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -12,7 +14,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const a = articles.find((a) => a.slug === slug);
-  return a ? pageMetadata(a.title, a.summary, `/panduan/${slug}`) : {};
+  return a
+    ? pageMetadata(a.title, a.summary, `/panduan/${slug}`, {
+        draft: !a.approved,
+      })
+    : {};
 }
 export default async function ArticlePage({ params }: Props) {
   const { t: tr, href: localizeHref } = await getI18n();
@@ -22,6 +28,14 @@ export default async function ArticlePage({ params }: Props) {
   if (!article) notFound();
   return (
     <div className="container">
+      <JsonLd
+        data={{
+          "@type": "Article",
+          headline: tr(article.title),
+          description: tr(article.summary),
+          url: absoluteUrl(localizeHref(`/panduan/${article.slug}`)),
+        }}
+      />
       <Breadcrumbs
         label={article.title}
         parents={[{ label: "Panduan", href: "/panduan" }]}

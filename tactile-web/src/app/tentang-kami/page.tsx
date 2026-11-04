@@ -1,3 +1,4 @@
+import { isPreview } from "@/config/site";
 import { getI18n } from "@/i18n/server";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -30,9 +31,11 @@ export default async function About() {
               "Setiap perjalanan dimulai dengan mengenali arah. Kami menghadirkan ruang informasi untuk memahami peran tactile indicator dalam aksesibilitas.",
             )}
           </p>
-          <span className="draft-badge">
-            {tr("PROFIL DRAFT · IDENTITAS MENUNGGU KONFIRMASI")}
-          </span>
+          {isPreview && (
+            <span className="draft-badge">
+              {tr("PROFIL DRAFT · IDENTITAS MENUNGGU KONFIRMASI")}
+            </span>
+          )}
         </div>
       </section>
       <div className="about-study">

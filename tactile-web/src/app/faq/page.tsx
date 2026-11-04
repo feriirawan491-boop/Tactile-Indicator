@@ -1,3 +1,5 @@
+import { isPreview } from "@/config/site";
+import { JsonLd } from "@/components/JsonLd";
 import { getI18n } from "@/i18n/server";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { FaqGroup } from "@/components/faq/FaqGroup";
@@ -17,6 +19,20 @@ export default async function Faq() {
   const groups = faqGroups.filter((g) => g.items.some((i) => i.answer.trim()));
   return (
     <div className="container">
+      <JsonLd
+        data={{
+          "@type": "FAQPage",
+          mainEntity: groups.flatMap((g) =>
+            g.items
+              .filter((i) => i.answer.trim())
+              .map((i) => ({
+                "@type": "Question",
+                name: tr(i.question),
+                acceptedAnswer: { "@type": "Answer", text: tr(i.answer) },
+              })),
+          ),
+        }}
+      />
       <Breadcrumbs label="FAQ" />
       <section className="catalog-hero">
         <p className="eyebrow">{tr("PUSAT BANTUAN / FAQ")}</p>
@@ -30,9 +46,11 @@ export default async function Faq() {
             "Jawaban awal untuk membantu Anda memahami produk dan mempersiapkan diskusi kebutuhan.",
           )}
         </p>
-        <span className="draft-badge">
-          {tr("JAWABAN DRAFT · MENUNGGU REVIEW KLIEN")}
-        </span>
+        {isPreview && (
+          <span className="draft-badge">
+            {tr("JAWABAN DRAFT · MENUNGGU REVIEW KLIEN")}
+          </span>
+        )}
       </section>
       <div className="faq-page">
         <nav className="topic-nav" aria-label={tr("Kelompok pertanyaan")}>

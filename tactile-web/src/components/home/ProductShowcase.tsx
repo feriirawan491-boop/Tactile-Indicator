@@ -10,9 +10,9 @@ export async function ProductShowcase() {
         {(["guiding", "warning"] as const).map((type) => (
           <div key={type}>
             <Image
-              src={`/images/products/catalog-v2/${type === "guiding" ? "studs-strips" : "silver-pineapple"}.webp`}
+              src={`/images/products/ablinox/model-${type === "guiding" ? "27" : "29"}.webp`}
               alt={tr(
-                `Ilustrasi AI ${type === "guiding" ? "batang pemandu arah" : "stud peringatan bulat"} stainless steel individual`,
+                `Foto referensi ${type === "guiding" ? "batang pemandu arah" : "stud peringatan bulat"} stainless steel individual`,
               )}
               width={650}
               height={650}
@@ -30,9 +30,7 @@ export async function ProductShowcase() {
         ))}
       </div>
       <p className="showcase-caption">
-        {tr(
-          "Ilustrasi AI · Bentuk produk untuk pengenalan, bukan spesifikasi final",
-        )}
+        {tr("Foto referensi pemasok · Konfirmasikan model sebelum pemesanan")}
       </p>
     </div>
   );

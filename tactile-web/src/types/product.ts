@@ -4,6 +4,10 @@ export interface ProductCardView {
   id: string;
   slug: string;
   name: string;
+  englishName?: string;
+  legacySlugs?: string[];
+  grades?: string[];
+  finishes?: string[];
   functionType: FunctionType;
   functionTypes?: FunctionType[];
   shape?: "tiles" | "studs" | "studs-strips" | "strips";
@@ -24,7 +28,16 @@ export interface ProductCardView {
   imageKind?: "generated" | "official";
   gallery?: { src: string; alt: string }[];
   specs?: { label: string; value: string }[];
-  variants?: { id: string; label: string }[];
+  variants?: {
+    id: string;
+    label: string;
+    specs?: { label: string; value: string }[];
+    image?: { src: string; alt: string };
+    sourceUrl?: string;
+    finishOptions?: string[];
+    grades?: string[];
+    finishes?: string[];
+  }[];
   preselectedVariantId?: string;
   variantRequired?: boolean;
   applicationNotes?: string[];
@@ -54,4 +67,7 @@ export interface CatalogFilters {
   q: string;
   demo: boolean;
   bentuk?: string;
+  grade?: string;
+  finishing?: string;
+  urutan?: string;
 }

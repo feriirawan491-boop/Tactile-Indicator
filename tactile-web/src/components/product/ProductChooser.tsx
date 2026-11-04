@@ -34,14 +34,14 @@ export async function ProductChooser({
           >
             <div className="chooser-photo">
               <Image
-                src={`/images/products/catalog-v2/${type === "guiding" ? "studs-strips" : "silver-pineapple"}.webp`}
+                src={`/images/products/ablinox/model-${type === "guiding" ? "27" : "29"}.webp`}
                 alt={tr(
-                  `Ilustrasi AI: tactile ${type === "guiding" ? "strip individual" : "stud individual"}`,
+                  `Foto referensi: tactile ${type === "guiding" ? "strip individual" : "stud individual"}`,
                 )}
                 width={300}
                 height={300}
               />
-              <span>{tr("ILUSTRASI AI")}</span>
+              <span>{tr("FOTO REFERENSI")}</span>
             </div>
             <div>
               <p className="eyebrow">
@@ -62,7 +62,7 @@ export async function ProductChooser({
                 )}
               </p>
               <span className="text-link">
-                {tr("Lihat pilihan")}
+                {tr("Lihat pilihan")}{" "}
                 {tr(type === "guiding" ? "pemandu" : "peringatan")} ↗
               </span>
             </div>

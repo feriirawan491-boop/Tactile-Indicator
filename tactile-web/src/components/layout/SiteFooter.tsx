@@ -1,6 +1,11 @@
+import { headers } from "next/headers";
+import { getCatalog } from "@/data/catalog";
+import { absoluteUrl } from "@/config/site";
+import { composeProductMessage } from "@/lib/product-inquiry";
 import { getI18n } from "@/i18n/server";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { isPreview } from "@/config/site";
 import { company } from "@/config/company";
 import { approvedEmail } from "@/lib/contact";
 import { navigation } from "@/config/navigation";
@@ -8,23 +13,41 @@ import { WhatsAppCTA } from "@/components/conversion/WhatsAppCTA";
 export async function SiteFooter() {
   const { t: tr, href: localizeHref } = await getI18n();
 
+  const path = (await headers()).get("x-tactile-path") || "/";
+  const product = getCatalog().products.find(
+    (p) => path === `/produk/${p.slug}`,
+  );
+  const message = product
+    ? composeProductMessage({
+        name: tr(product.name),
+        url: absoluteUrl(localizeHref(path)),
+      })
+    : undefined;
   const email = approvedEmail(company.email, company.approved);
   return (
     <>
-      <section className="closing">
-        <div className="container closing-inner">
-          <div>
-            <p className="eyebrow">{tr("LANGKAH SELANJUTNYA")}</p>
-            <h2>
-              {tr("JALUR YANG BAIK")}
-              <br />
-              {tr("DIMULAI DARI DISKUSI.")}
-            </h2>
-            <p>{tr("Ceritakan kebutuhan area dan spesifikasi proyek Anda.")}</p>
+      {path !== "/kontak" && (
+        <section className="closing">
+          <div className="container closing-inner">
+            <div>
+              <p className="eyebrow">{tr("LANGKAH SELANJUTNYA")}</p>
+              <h2>
+                {tr("JALUR YANG BAIK")}
+                <br />
+                {tr("DIMULAI DARI DISKUSI.")}
+              </h2>
+              <p>
+                {tr("Ceritakan kebutuhan area dan spesifikasi proyek Anda.")}
+              </p>
+            </div>
+            <WhatsAppCTA
+              label="Diskusikan kebutuhan proyek"
+              outline
+              message={message}
+            />
           </div>
-          <WhatsAppCTA label="Diskusikan kebutuhan proyek" outline />
-        </div>
-      </section>
+        </section>
+      )}
       <footer className="site-footer">
         <div className="container">
           <div className="footer-main">
@@ -65,16 +88,22 @@ export async function SiteFooter() {
                   {tr(company.address)}
                 </address>
               )}
-              <span className="draft-label">
-                {tr("Pratinjau lokal · Fase 0–12")}
-              </span>
+              {isPreview && (
+                <span className="draft-label">
+                  {tr("Pratinjau lokal · Fase 0–12")}
+                </span>
+              )}
             </div>
           </div>
           <div className="footer-bottom">
             <span>
               © {new Date().getFullYear()}
               {tr(" ")}
-              {tr("Tactile Indicator · Identitas brand sementara")}
+              {tr(
+                isPreview
+                  ? "Tactile Indicator · Identitas brand sementara"
+                  : "Tactile Indicator",
+              )}
             </span>
             <span>{tr("Dirancang untuk langkah yang lebih terarah.")}</span>
           </div>

@@ -1,12 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 :root {
   --bg: #fff;
   --soft: #fafafa;
   --ink: #0a0a0a;
   --muted: #525252;
   --border: #e5e5e5;
-  --display: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
-  --body: "Plus Jakarta Sans", Arial, sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -16,6 +13,8 @@ html {
   scroll-padding-top: 100px;
 }
 body {
+  --display: var(--font-display), "Arial Narrow", Impact, sans-serif;
+  --body: var(--font-body), Arial, sans-serif;
   margin: 0;
   background: var(--bg);
   color: var(--ink);
