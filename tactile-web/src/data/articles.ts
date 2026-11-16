@@ -47,7 +47,7 @@ export const articles: Article[] = [
     summary:
       "Bedakan petunjuk arah dan isyarat kewaspadaan sebelum memilih produk.",
     topic: "Fungsi",
-    approved: false,
+    approved: true,
     sources: [source, dft],
     relatedLinks: [
       {
@@ -84,7 +84,7 @@ export const articles: Article[] = [
     summary:
       "Bingung memilih tactile indicator? Siapkan informasi area, ukuran, dan kebutuhan pemasangan dengan checklist sederhana ini.",
     topic: "Pemilihan",
-    approved: false,
+    approved: true,
     sources: [],
     relatedLinks: [
       { label: "Jelajahi katalog", href: "/produk" },

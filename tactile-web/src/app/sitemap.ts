@@ -17,7 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...materials.map((m) => `/produk/material/${m.slug}`),
     "/produk/fungsi/guiding-block",
     "/produk/fungsi/warning-block",
-    ...articles.filter((a) => a.approved).map((a) => `/panduan/${a.slug}`),
+    ...articles
+      .filter((article) => article.approved)
+      .map((article) => `/panduan/${article.slug}`),
   ];
   return paths.flatMap((path) =>
     (["id", "en"] as const).map((locale) => ({

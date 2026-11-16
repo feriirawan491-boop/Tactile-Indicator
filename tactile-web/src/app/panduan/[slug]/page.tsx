@@ -48,9 +48,11 @@ export default async function ArticlePage({ params }: Props) {
           </p>
           <h1>{tr(article.title)}</h1>
           <p className="article-lead">{tr(article.summary)}</p>
-          <span className="draft-badge">
-            {tr("DRAFT EDUKASI · BELUM DIREVIEW KLIEN")}
-          </span>
+          {!article.approved && (
+            <span className="draft-badge">
+              {tr("DRAFT EDUKASI · BELUM DIREVIEW KLIEN")}
+            </span>
+          )}
         </header>
         <div className="article-layout">
           <nav className="article-toc" aria-label={tr("Daftar isi")}>
