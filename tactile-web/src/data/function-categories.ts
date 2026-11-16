@@ -5,7 +5,7 @@ export const functionCategories: FunctionCategoryView[] = [
     functionType: "guiding",
     title: "Guiding Block (Ubin Pemandu)",
     definition:
-      "Guiding block menggunakan pola garis memanjang untuk membantu pengguna mengenali arah perjalanan melalui tekstur permukaan. Pola ini dapat dirasakan dengan kaki atau tongkat. Dalam perencanaan jalur, pola arah perlu dibaca sebagai bagian dari susunan yang utuh, bukan elemen dekoratif yang berdiri sendiri. Pilihan material, ukuran, dan cara pemasangan harus diperiksa berdasarkan kebutuhan area serta spesifikasi produk yang telah dikonfirmasi. Halaman ini memperkenalkan fungsi dasarnya; keputusan penempatan tetap memerlukan peninjauan desain jalur proyek.",
+      "Guiding block adalah penanda lantai berpola garis memanjang yang membantu penyandang disabilitas netra mengikuti arah jalur melalui kaki atau tongkat. Pilih bentuk pelat atau strip sesuai rancangan area Anda. Perhatikan kesinambungan jalur, ukuran, dan kondisi lantai, lalu cocokkan cara pemasangannya dengan spesifikasi proyek.",
     characteristics:
       "Pola garis memanjang yang berulang, berbeda secara tekstur dari pola titik pada warning block.",
     usage: "Memberi petunjuk arah di sepanjang jalur yang direncanakan.",
@@ -29,7 +29,7 @@ export const functionCategories: FunctionCategoryView[] = [
     functionType: "warning",
     title: "Warning Block (Ubin Peringatan)",
     definition:
-      "Warning block menggunakan pola titik yang memberi isyarat kewaspadaan atau perubahan kondisi pada suatu jalur. Tekstur titik membedakannya dari guiding block yang memakai garis memanjang. Penggunaan pola peringatan perlu mempertimbangkan konteks ruang, kesinambungan jalur, dan kondisi yang ingin diinformasikan kepada pengguna. Material maupun ukuran tidak dapat dipilih hanya dari tampilan pola. Konfirmasikan spesifikasi produk dan tinjau rancangan area sebelum menentukan kebutuhan. Penjelasan ini merupakan pengantar fungsi, bukan panduan pemasangan teknis atau pernyataan kepatuhan terhadap standar tertentu.",
+      "Warning block adalah penanda lantai berpola titik yang mengingatkan pengguna agar lebih waspada terhadap perubahan kondisi jalur. Berbeda dari guiding block yang menunjukkan arah, pola ini memberi isyarat perhatian. Jelajahi pilihan pelat atau stud bulat, lalu sesuaikan penempatan, ukuran, dan cara pemasangannya dengan rancangan aksesibilitas proyek.",
     characteristics:
       "Pola titik berulang sebagai pembeda taktil dari pola garis guiding block.",
     usage:

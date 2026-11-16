@@ -52,7 +52,7 @@
 }
 .product-card .product-media {
   aspect-ratio: 1;
-  background: #f3f2ef;
+  background: #fff;
 }
 .product-media img {
   object-fit: contain;

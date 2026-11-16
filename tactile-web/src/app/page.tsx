@@ -7,11 +7,12 @@ import { SurfacePattern } from "@/components/ui/SurfacePattern";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Accordion } from "@/components/ui/Accordion";
 import { WhatsAppCTA } from "@/components/conversion/WhatsAppCTA";
+import { SelectionIllustration } from "@/components/home/SelectionIllustration";
 import { faqs, steps } from "@/data/home";
 export async function generateMetadata() {
   return pageMetadata(
-    "Tactile Indicator Stainless Steel untuk Aksesibilitas",
-    "Kenali tactile indicator berpola garis dan titik, fungsi dan pertimbangan pemilihannya.",
+    "Tactile Indicator Stainless Steel | Guiding & Warning Block",
+    "Temukan tactile indicator stainless steel untuk jalur pemandu dan peringatan. Bandingkan pelat, stud, dan strip, lalu konsultasikan kebutuhan proyek Anda.",
   );
 }
 export default async function Home() {
@@ -44,15 +45,15 @@ export default async function Home() {
               {tr("AKSESIBILITAS DALAM SETIAP LANGKAH")}
             </p>
             <h1>
-              {tr("PERMUKAAN KECIL.")}
+              {tr("TACTILE INDICATOR.")}
               <br />
-              {tr("ARAH YANG")}
+              {tr("SMALL DETAILS.")}
               <br />
-              <span>{tr("BERARTI.")}</span>
+              <span>{tr("CLEAR DIRECTION.")}</span>
             </h1>
             <p className="hero-description">
               {tr(
-                "Tactile indicator membantu mengenali arah dan peringatan melalui pola pada permukaan. Kenali pilihan yang sesuai untuk kebutuhan jalur Anda.",
+                "Bantu setiap langkah menemukan arah. Pilih tactile indicator stainless steel dengan pola garis untuk memandu dan pola titik untuk memberi peringatan. Belum yakin pilih yang mana? Mari diskusikan kebutuhan area Anda.",
               )}
             </p>
             <div className="hero-actions">
@@ -84,18 +85,18 @@ export default async function Home() {
         <p className="eyebrow">{tr("01 / KENALI TACTILE")}</p>
         <div>
           <h2>
-            {tr("SEBUAH POLA.")}
+            {tr("SMALL PATTERNS.")}
             <br />
-            {tr("SEBUAH PETUNJUK.")}
+            {tr("MEANINGFUL STEPS.")}
           </h2>
           <p>
             {tr(
-              "Tidak semua orang membaca ruang dengan cara yang sama. Tactile indicator menghadirkan informasi melalui tekstur yang dapat dirasakan oleh kaki atau tongkat.",
+              "Tactile indicator adalah penanda bertekstur pada lantai yang membantu penyandang disabilitas netra mengenali jalur melalui kaki atau tongkat. Detail kecil ini punya peran besar dalam membuat ruang lebih mudah dinavigasi.",
             )}
           </p>
           <p>
             {tr(
-              "Pola garis membantu menunjukkan arah, sementara pola titik memberi isyarat kewaspadaan. Keduanya memiliki peran berbeda dalam sebuah jalur.",
+              "Cara membedakannya sederhana: pola garis menunjukkan arah, sedangkan pola titik mengingatkan pengguna untuk lebih waspada. Keduanya saling melengkapi dalam jalur aksesibilitas.",
             )}
           </p>
           <Link className="text-link" href={localizeHref("/panduan")}>
@@ -110,12 +111,12 @@ export default async function Home() {
           <SectionHeading
             index="02"
             kicker="DUA FUNGSI UTAMA"
-            title={tr("KENALI POLANYA.")}
+            title={tr("FIND YOUR DIRECTION.")}
           >
             <p>
-              {tr("Mulai dari fungsi yang dibutuhkan.")}
+              {tr("Butuh petunjuk arah atau penanda peringatan?")}
               <br />
-              {tr("Setiap pola membawa informasi berbeda.")}
+              {tr("Kenali dua pola ini sebelum memilih produk.")}
             </p>
           </SectionHeading>
           <div className="function-grid">
@@ -142,7 +143,7 @@ export default async function Home() {
                 <h3>{tr("GUIDING")}</h3>
                 <p>
                   {tr(
-                    "Pola garis memanjang untuk membantu mengenali arah perjalanan.",
+                    "Guiding block memakai pola garis memanjang untuk membantu pengguna mengikuti arah jalur.",
                   )}
                 </p>
                 <span className="text-link">
@@ -174,7 +175,7 @@ export default async function Home() {
                 <h3>{tr("WARNING")}</h3>
                 <p>
                   {tr(
-                    "Pola titik untuk memberi isyarat kewaspadaan atau perubahan kondisi jalur.",
+                    "Warning block memakai pola titik untuk mengingatkan pengguna agar lebih waspada terhadap perubahan kondisi jalur.",
                   )}
                 </p>
                 <span className="text-link">
@@ -190,11 +191,11 @@ export default async function Home() {
         <SectionHeading
           index="03"
           kicker="PERTIMBANGAN MATERIAL"
-          title={tr("SESUAIKAN DENGAN AREANYA.")}
+          title={tr("THE RIGHT FIT.")}
         >
           <p>
             {tr(
-              "Lokasi dan kondisi penggunaan menjadi dasar pemilihan material dan metode pemasangan.",
+              "Setiap area punya kebutuhan berbeda. Mulai dari kondisi lantai, lokasi penggunaan, hingga cara pemasangannya.",
             )}
           </p>
         </SectionHeading>
@@ -203,15 +204,15 @@ export default async function Home() {
             03 /
           </span>
           <div>
-            <h3>{tr("Stainless steel untuk berbagai bentuk.")}</h3>
+            <h3>{tr("Satu material, beragam pilihan bentuk.")}</h3>
             <p>
               {tr(
-                "Kenali pelat modular, studs bulat, serta kombinasi studs dan strips. Grade 304 atau 316 tergantung model produk; sesuaikan dimensi, finishing, dan pemasangan dengan kebutuhan proyek.",
+                "Pilih pelat tactile, stud bulat, atau strip memanjang sesuai rancangan jalur Anda. Pilihan grade 304 atau 316, ukuran, dan finishing berbeda pada setiap model. Kami bantu Anda membahas detailnya sebelum memesan.",
               )}
             </p>
           </div>
           <Link className="text-link" href={localizeHref("/produk")}>
-            {tr("Ke katalog")}
+            {tr("Lihat pilihan produk")}
             <ArrowUpRight size={18} />
           </Link>
         </div>
@@ -221,7 +222,7 @@ export default async function Home() {
           <SectionHeading
             index="04"
             kicker="PANDUAN PEMILIHAN"
-            title={tr("EMPAT LANGKAH.\nPILIHAN LEBIH TERARAH.")}
+            title={tr("LET’S FIND\nYOUR FIT.")}
           />
           <div className="steps-grid">
             {steps.map(([title, description], i) => (
@@ -230,6 +231,7 @@ export default async function Home() {
                   0{i + 1}
                   <ArrowUpRight size={20} />
                 </span>
+                <SelectionIllustration step={i} />
                 <h3>{tr(title)}</h3>
                 <p>{tr(description)}</p>
               </div>
@@ -240,14 +242,14 @@ export default async function Home() {
       <section className="section container about-teaser">
         <p className="eyebrow">{tr("05 / TENTANG KAMI")}</p>
         <h2>
-          {tr("BERAWAL DARI")}
+          {tr("BETTER ACCESS.")}
           <br />
-          {tr("KEBUTUHAN AKSES.")}
+          {tr("STARTS HERE.")}
         </h2>
         <div>
           <p>
             {tr(
-              "Halaman ini memperkenalkan tactile indicator dan membantu Anda memahami pertimbangan pemilihannya. Profil resmi perusahaan akan dilengkapi setelah identitas dan informasinya disetujui.",
+              "Memilih tactile indicator tidak harus membingungkan. Kami membantu Anda mengenali pilihan produk, memahami spesifikasinya, dan membahas kebutuhan jalur sebelum meminta penawaran.",
             )}
           </p>
           <Link className="text-link" href={localizeHref("/tentang-kami")}>
@@ -260,7 +262,7 @@ export default async function Home() {
         <SectionHeading
           index="06"
           kicker="BEKAL SEBELUM MEMILIH"
-          title={tr("PAHAMI LEBIH DULU.")}
+          title={tr("A LITTLE KNOW-HOW.")}
         >
           <Link href={localizeHref("/panduan")} className="text-link">
             {tr("Semua panduan")}
@@ -293,6 +295,7 @@ export default async function Home() {
                 <span>{tr(tag)}</span>
                 <span>0{i + 1}</span>
               </div>
+              <SelectionIllustration step={i} />
               <h3>{tr(title)}</h3>
               <p>{tr(desc)}</p>
               <span className="text-link">

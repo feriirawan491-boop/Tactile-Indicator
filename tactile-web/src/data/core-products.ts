@@ -73,7 +73,7 @@ const families: {
     en: "Stainless Steel Thread Pattern Tactile Stud",
     ids: [37],
     pattern:
-      "Model thread pada katalog sumber; bentuk dan sistem pengikat perlu dikonfirmasi.",
+      "Stud dengan pola ulir. Tanyakan detail bentuk dan sistem pengikat untuk model pilihan Anda.",
   },
 ];
 export const coreProducts: ProductCardView[] = families.map((family) => {
@@ -109,7 +109,7 @@ export const coreProducts: ProductCardView[] = families.map((family) => {
       finishes,
       finishOptions,
       image: {
-        src: `/images/products/ablinox/model-${String(source.id).padStart(2, "0")}.webp`,
+        src: `/images/products/ablinox-cropped/model-${String(source.id).padStart(2, "0")}.webp`,
         alt: `${family.name} — model ${source.id}, foto referensi pemasok`,
       },
     };
@@ -128,8 +128,8 @@ export const coreProducts: ProductCardView[] = families.map((family) => {
     grades: [...new Set(variants.flatMap((v) => v.grades))],
     finishes: [...new Set(variants.flatMap((v) => v.finishes))],
     specs: [{ label: "Material", value: "Stainless steel" }],
-    shortDescription: `${family.pattern} Bandingkan ${variants.length} model dan periksa spesifikasinya sebelum meminta penawaran.`,
-    description: `${family.pattern} Pilih model untuk melihat dimensi dan rincian sumber. Setiap model mempertahankan data asalnya; ukuran dan opsi model tidak dianggap saling menggantikan.`,
+    shortDescription: `${family.pattern} Jelajahi ${variants.length} pilihan model, cek ukurannya, lalu tanyakan penawaran untuk kebutuhan Anda.`,
+    description: `${family.pattern} Pilih model untuk melihat ukuran, material, dan cara pemasangannya. Jika masih ragu, kirim pilihan Anda melalui WhatsApp agar kita bisa membahas spesifikasinya sebelum memesan.`,
     applicationNotes: [
       "Penempatan mengikuti rancangan jalur dan kondisi permukaan proyek.",
       "Konfirmasikan dimensi, pengikat, grade, finishing, MOQ, lead time, sampel, serta dokumen teknis untuk model yang dipilih.",

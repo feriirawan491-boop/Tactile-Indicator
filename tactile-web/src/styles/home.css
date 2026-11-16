@@ -427,3 +427,12 @@
   padding: 0 24px 24px 32px;
   font-size: 13px;
 }
+
+/* Monochrome diagrams for the four selection steps. */
+.steps-section .selection-illustration {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  margin: -8px 0 24px;
+}

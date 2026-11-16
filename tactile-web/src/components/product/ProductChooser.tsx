@@ -34,7 +34,7 @@ export async function ProductChooser({
           >
             <div className="chooser-photo">
               <Image
-                src={`/images/products/ablinox/model-${type === "guiding" ? "27" : "29"}.webp`}
+                src={`/images/products/ablinox-cropped/model-${type === "guiding" ? "27" : "29"}.webp`}
                 alt={tr(
                   `Foto referensi: tactile ${type === "guiding" ? "strip individual" : "stud individual"}`,
                 )}

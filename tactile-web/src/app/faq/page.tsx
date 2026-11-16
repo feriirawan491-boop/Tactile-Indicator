@@ -8,8 +8,8 @@ import { WhatsAppCTA } from "@/components/conversion/WhatsAppCTA";
 import { pageMetadata } from "@/lib/seo";
 export async function generateMetadata() {
   return pageMetadata(
-    "Pertanyaan yang sering diajukan",
-    "Jawaban dasar tentang fungsi, material, varian, dan persiapan konsultasi tactile indicator.",
+    "FAQ Tactile Indicator: Produk, Ukuran & Konsultasi",
+    "Cari jawaban tentang tactile indicator, guiding dan warning block, pilihan ukuran, material, serta cara meminta penawaran melalui WhatsApp.",
     "/faq",
   );
 }
@@ -43,7 +43,7 @@ export default async function Faq() {
         </h1>
         <p>
           {tr(
-            "Jawaban awal untuk membantu Anda memahami produk dan mempersiapkan diskusi kebutuhan.",
+            "Ada yang ingin ditanyakan? Temukan jawaban seputar produk, pilihan model, dan cara memulai konsultasi di sini.",
           )}
         </p>
         {isPreview && (

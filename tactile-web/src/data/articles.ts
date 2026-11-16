@@ -13,7 +13,7 @@ export const articles: Article[] = [
     slug: "apa-itu-tactile-indicator",
     title: "Apa itu tactile indicator?",
     summary:
-      "Mengenali peran tekstur permukaan sebagai informasi dalam sebuah jalur.",
+      "Kenali fungsi tactile indicator, pola garis dan titik, serta perannya dalam membantu pengguna membaca jalur.",
     topic: "Dasar",
     featured: true,
     approved: false,
@@ -82,7 +82,7 @@ export const articles: Article[] = [
     slug: "checklist-memilih-tactile-indicator",
     title: "Checklist memilih tactile indicator untuk proyek.",
     summary:
-      "Siapkan konteks area dan pertanyaan yang membantu pembahasan pilihan.",
+      "Bingung memilih tactile indicator? Siapkan informasi area, ukuran, dan kebutuhan pemasangan dengan checklist sederhana ini.",
     topic: "Pemilihan",
     approved: false,
     sources: [],
@@ -93,7 +93,7 @@ export const articles: Article[] = [
     sections: [
       {
         id: "siapkan-konteks",
-        title: "Siapkan konteks area",
+        title: "Kenali kebutuhan area Anda",
         paragraphs: [
           "Gunakan daftar ini sebagai persiapan diskusi kebutuhan, bukan instruksi teknis pemasangan.",
         ],

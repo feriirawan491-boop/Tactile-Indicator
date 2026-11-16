@@ -12,23 +12,23 @@ export const faqs = [
   {
     question: "Bagaimana memilih material yang sesuai?",
     answer:
-      "Pertimbangkan lokasi, kondisi permukaan, intensitas penggunaan, serta metode pemasangan. Konfirmasi spesifikasi produk dan kebutuhan proyek sebelum menentukan pilihan.",
+      "Mulai dari lokasi penggunaan dan kondisi lantainya. Lalu periksa ukuran, grade material, serta cara pemasangan model yang Anda pilih. Jika belum yakin, bagikan foto atau denah area saat konsultasi.",
   },
   {
     question: "Informasi apa yang perlu disiapkan untuk konsultasi?",
     answer:
-      "Siapkan lokasi penggunaan, foto atau denah area, perkiraan kebutuhan, dan spesifikasi proyek bila tersedia. Data ini membantu pembahasan pilihan produk.",
+      "Cukup mulai dari foto atau denah area, lokasi penggunaan, dan perkiraan jumlah jika sudah ada. Belum punya detail lengkap? Anda tetap bisa menghubungi kami untuk membahas langkah awal.",
   },
 ] as const;
 export const steps = [
   [
     "Tentukan fungsi",
-    "Petunjuk arah atau peringatan? Mulai dari kebutuhan jalur.",
+    "Butuh pola garis untuk arah atau pola titik untuk peringatan?",
   ],
   ["Pilih material", "Sesuaikan karakter material dengan kondisi area."],
   [
     "Kenali penggunaan",
     "Perhatikan lokasi, permukaan, dan kebutuhan pemasangan.",
   ],
-  ["Periksa spesifikasi", "Konfirmasi ukuran, varian, dan kebutuhan proyek."],
+  ["Periksa spesifikasi", "Cek ukuran dan model, lalu tanyakan penawaran melalui WhatsApp."],
 ];

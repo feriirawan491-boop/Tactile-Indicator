@@ -23,7 +23,7 @@
 .gallery-main {
   aspect-ratio: 1;
   position: relative;
-  background: var(--soft);
+  background: #fff;
   border: 1px solid var(--border);
   display: grid;
   place-items: center;
@@ -53,7 +53,7 @@
 .gallery-thumbnails button {
   width: 84px;
   height: 84px;
-  background: var(--soft);
+  background: #fff;
   border: 1px solid var(--border);
   padding: 0;
   overflow: hidden;

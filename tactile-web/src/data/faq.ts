@@ -7,7 +7,7 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "Apa itu tactile indicator?",
         answer:
-          "Permukaan berpola yang menghadirkan informasi taktil sebagai bagian dari orientasi sebuah jalur.",
+          "Tactile indicator adalah penanda lantai bertekstur yang dapat dirasakan dengan kaki atau tongkat. Pola ini membantu penyandang disabilitas netra mengenali arah dan isyarat peringatan pada jalur.",
         link: {
           label: "Baca pengantar tactile indicator",
           href: "/panduan/apa-itu-tactile-indicator",
@@ -31,12 +31,12 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "Bagaimana memilih material?",
         answer:
-          "Siapkan konteks lokasi dan kondisi permukaan, lalu periksa data produk resmi. Nama material saja belum cukup untuk menentukan kesesuaiannya.",
+          "Mulai dari lokasi penggunaan dan kondisi lantainya. Lalu bandingkan ukuran, grade material, dan cara pemasangan tiap model agar sesuai dengan kebutuhan proyek.",
       },
       {
         question: "Apakah ukuran dan warna sudah tersedia?",
         answer:
-          "Ukuran dan finishing berbeda menurut model. Pilih model pada halaman produk untuk membaca data sumber, lalu konfirmasikan ketersediaan dan spesifikasi pesanan.",
+          "Setiap model punya pilihan ukuran dan finishing yang berbeda. Pilih model di halaman produk untuk melihat detailnya, lalu hubungi kami untuk menanyakan ketersediaan sebelum memesan.",
         link: { label: "Buka katalog", href: "/produk" },
       },
     ],
@@ -57,7 +57,7 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "Apakah website menentukan metode pemasangan?",
         answer:
-          "Metode pemasangan tidak diasumsikan. Gunakan dokumen produk dan rancangan proyek yang sudah ditinjau sebelum menentukan pelaksanaan.",
+          "Anda bisa melihat detail pemasangan pada model yang dipilih. Untuk pelaksanaannya, cocokkan dengan kondisi lantai, dokumen produk, dan rancangan jalur yang sudah ditinjau tim proyek.",
       },
       {
         question: "Apakah klik WhatsApp langsung mengirim pesan?",

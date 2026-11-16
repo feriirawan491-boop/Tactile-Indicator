@@ -6,7 +6,7 @@ import { ContactDetails } from "@/components/contact/ContactDetails";
 import { pageMetadata } from "@/lib/seo";
 export async function generateMetadata() {
   return pageMetadata(
-    "Hubungi kami",
+    "Konsultasi Tactile Indicator & Permintaan Penawaran",
     "Diskusikan pilihan tactile indicator, kebutuhan jumlah, dan spesifikasi proyek melalui WhatsApp.",
     "/kontak",
   );
@@ -27,7 +27,7 @@ export default async function Contact() {
           </h1>
           <p>
             {tr(
-              "Ceritakan kebutuhan jalur, pilihan produk, atau spesifikasi proyek yang ingin didiskusikan.",
+              "Belum tahu harus mulai dari mana? Kirim foto area, denah, atau ceritakan kebutuhan Anda. Kita bahas pilihan tactile indicator dan detail produknya bersama.",
             )}
           </p>
           <WhatsAppCTA
@@ -36,7 +36,7 @@ export default async function Contact() {
           />
           <p className="inquiry-note">
             {tr(
-              "Website tidak menyediakan formulir atau menyimpan permintaan penawaran. Percakapan dilanjutkan melalui WhatsApp.",
+              "Klik tombol di atas untuk mulai chat. Anda bisa membaca dan mengubah pesan sebelum mengirimkannya.",
             )}
           </p>
         </div>
@@ -52,7 +52,7 @@ export default async function Contact() {
               "Telusuri fungsi dan material. Bila belum menentukan pilihan, mulai dari kebutuhan area.",
             ],
             [
-              "Siapkan konteks",
+              "Ceritakan kebutuhan Anda",
               "Siapkan ukuran yang dibutuhkan, perkiraan jumlah, serta lokasi penggunaan bila sudah diketahui.",
             ],
             [
@@ -69,7 +69,7 @@ export default async function Contact() {
         </div>
         <p className="category-copy">
           {tr(
-            "Alur ini membantu menyiapkan diskusi, bukan janji waktu respons atau ketersediaan layanan.",
+            "Belum punya ukuran atau jumlah pasti? Tidak apa-apa. Mulai dengan informasi yang Anda punya.",
           )}
         </p>
         <div className="category-links">

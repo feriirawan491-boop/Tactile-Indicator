@@ -37,11 +37,11 @@ export async function SiteFooter() {
                 {tr("DIMULAI DARI DISKUSI.")}
               </h2>
               <p>
-                {tr("Ceritakan kebutuhan area dan spesifikasi proyek Anda.")}
+                {tr("Punya foto area atau denah? Kirim lewat WhatsApp, lalu kita bahas pilihan tactile indicator untuk proyek Anda.")}
               </p>
             </div>
             <WhatsAppCTA
-              label="Diskusikan kebutuhan proyek"
+              label="Yuk, diskusikan proyek Anda"
               outline
               message={message}
             />
@@ -54,7 +54,7 @@ export async function SiteFooter() {
             <div>
               <Link href={localizeHref("/")} className="footer-brand">
                 {tr("TACTILE INDICATOR")}
-                <span>{tr("PERMUKAAN KECIL. PERAN BERARTI.")}</span>
+                <span>{tr("TACTILE INDICATOR. PERAN CLEAR DIRECTION.")}</span>
               </Link>
               <p>
                 {tr("Informasi tactile indicator untuk")}

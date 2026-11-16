@@ -10,7 +10,7 @@ export async function ProductShowcase() {
         {(["guiding", "warning"] as const).map((type) => (
           <div key={type}>
             <Image
-              src={`/images/products/ablinox/model-${type === "guiding" ? "27" : "29"}.webp`}
+              src={`/images/products/ablinox-cropped/model-${type === "guiding" ? "27" : "29"}.webp`}
               alt={tr(
                 `Foto referensi ${type === "guiding" ? "batang pemandu arah" : "stud peringatan bulat"} stainless steel individual`,
               )}

@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/seo";
 export async function generateMetadata() {
   return pageMetadata(
     "Tentang kami",
-    "Mengenal fokus Tactile Indicator dan alur pembahasan kebutuhan jalur aksesibilitas.",
+    "Kenali Tactile Indicator dan cara kami membantu Anda memahami produk, membandingkan spesifikasi, dan membahas kebutuhan jalur aksesibilitas.",
     "/tentang-kami",
   );
 }
@@ -21,14 +21,14 @@ export default async function About() {
       <section className="about-hero">
         <p className="eyebrow">{tr("TENTANG TACTILE INDICATOR")}</p>
         <h1>
-          {tr("MEMAHAMI RUANG.")}
+          {tr("BETTER ACCESS.")}
           <br />
-          {tr("MEMBANTU ARAH.")}
+          {tr("ONE STEP AT A TIME.")}
         </h1>
         <div className="about-lead">
           <p>
             {tr(
-              "Setiap perjalanan dimulai dengan mengenali arah. Kami menghadirkan ruang informasi untuk memahami peran tactile indicator dalam aksesibilitas.",
+              "Ruang yang mudah dinavigasi dimulai dari petunjuk yang jelas. Tactile Indicator membantu Anda mengenali pilihan penanda lantai untuk mendukung kebutuhan aksesibilitas proyek.",
             )}
           </p>
           {isPreview && (
@@ -51,16 +51,16 @@ export default async function About() {
           </h2>
           <p>
             {tr(
-              "Website ini dirancang untuk membantu kebutuhan informasi tactile indicator: mulai dari perbedaan pola guiding dan warning hingga pertimbangan pemilihan material dan spesifikasi.",
+              "Dari pola garis dan titik hingga pilihan pelat, stud, dan strip, kami membuat informasi produk lebih mudah dipahami agar Anda bisa membandingkan pilihan dengan percaya diri.",
             )}
           </p>
           <p>
             {tr(
-              "Nama badan usaha, lokasi, cakupan layanan, serta portofolio belum dikonfirmasi. Profil ini akan diperbarui menggunakan informasi resmi sebelum website dipublikasikan.",
+              "Punya denah, foto area, atau daftar kebutuhan? Bagikan melalui WhatsApp untuk membahas pilihan produk, ukuran, dan spesifikasi yang perlu diperhatikan.",
             )}
           </p>
           <Link href={localizeHref("/produk")} className="text-link">
-            {tr("Jelajahi informasi produk")}
+            {tr("Jelajahi produk")}
             <ArrowUpRight size={18} />
           </Link>
         </div>
@@ -76,7 +76,7 @@ export default async function About() {
           {[
             [
               "Diskusi kebutuhan",
-              "Siapkan konteks area, foto atau denah, serta kebutuhan jalur.",
+              "Kenali kebutuhan area Anda, foto atau denah, serta kebutuhan jalur.",
             ],
             [
               "Pembahasan pilihan",
@@ -103,11 +103,11 @@ export default async function About() {
         <div>
           <p>
             {tr(
-              "WhatsApp tersedia untuk konsultasi. Alamat dan email sedang menunggu konfirmasi. Informasi kontak ditampilkan setelah mendapat persetujuan.",
+              "Mulai dari percakapan sederhana. Ceritakan lokasi penggunaan dan kebutuhan Anda melalui WhatsApp, lalu kita bahas pilihan produknya bersama.",
             )}
           </p>
           <Link className="text-link" href={localizeHref("/kontak")}>
-            {tr("Lihat status kontak")}
+            {tr("Hubungi kami")}
             <ArrowUpRight size={18} />
           </Link>
         </div>

@@ -9,7 +9,7 @@ import type { SearchQuery } from "@/types/product";
 export async function generateMetadata() {
   return pageMetadata(
     "Panduan tactile indicator",
-    "Pengantar fungsi tactile indicator dan checklist untuk pembahasan kebutuhan proyek.",
+    "Pelajari fungsi tactile indicator, perbedaan guiding dan warning block, serta checklist memilih produk untuk kebutuhan jalur aksesibilitas.",
     "/panduan",
   );
 }
@@ -40,7 +40,7 @@ export default async function Guides({
         </h1>
         <p>
           {tr(
-            "Pahami fungsi dan siapkan pertanyaan yang tepat sebelum menentukan pilihan.",
+            "Baru mengenal tactile indicator? Mulai di sini. Pelajari perbedaan pola garis dan titik, lalu gunakan checklist untuk menyiapkan kebutuhan proyek Anda.",
           )}
         </p>
         {isPreview && (

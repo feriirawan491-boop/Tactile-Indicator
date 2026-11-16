@@ -137,7 +137,7 @@ export function ProductInquiry({
       {!variant && variants.length > 0 && (
         <p>
           {tr(
-            "Pilih model di atas untuk melihat data dimensi dan pemasangannya.",
+            "Pilih model di atas untuk melihat ukuran dan detail pemasangannya.",
           )}
         </p>
       )}
@@ -170,7 +170,7 @@ export function ProductInquiry({
       </div>
       <p className="inquiry-note">
         {tr(
-          "Tidak ada harga atau status stok yang diasumsikan. Klik WhatsApp membuka percakapan, bukan mengirim pesan otomatis.",
+          "Tanyakan harga dan ketersediaan melalui WhatsApp. Pesan awal bisa Anda sesuaikan sebelum dikirim.",
         )}
       </p>
     </div>

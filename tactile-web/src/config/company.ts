@@ -8,6 +8,6 @@ export const company: CompanyProfile = {
   approved: process.env.NEXT_PUBLIC_COMPANY_APPROVED === "true",
 };
 export const whatsappConfig = {
-  number: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "6281222952857",
+  number: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "6282214922270",
   approved: (process.env.NEXT_PUBLIC_WHATSAPP_APPROVED ?? "true") === "true",
 };
