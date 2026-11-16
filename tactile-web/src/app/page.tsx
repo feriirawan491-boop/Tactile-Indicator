@@ -11,8 +11,8 @@ import { SelectionIllustration } from "@/components/home/SelectionIllustration";
 import { faqs, steps } from "@/data/home";
 export async function generateMetadata() {
   return pageMetadata(
-    "Tactile Indicator Stainless Steel | Guiding & Warning Block",
-    "Temukan tactile indicator stainless steel untuk jalur pemandu dan peringatan. Bandingkan pelat, stud, dan strip, lalu konsultasikan kebutuhan proyek Anda.",
+    "Guiding Block Stainless Steel – Ubin Pemandu & Peringatan Tunanetra",
+    "Jual guiding block stainless steel: stud, strip, dan pelat tactile untuk jalur pemandu dan peringatan. Konsultasikan kebutuhan proyek via WhatsApp.",
   );
 }
 export default async function Home() {
@@ -45,12 +45,13 @@ export default async function Home() {
               {tr("AKSESIBILITAS DALAM SETIAP LANGKAH")}
             </p>
             <h1>
-              {tr("TACTILE INDICATOR.")}
+              {tr("Guiding Block &")}
               <br />
-              {tr("SMALL DETAILS.")}
-              <br />
-              <span>{tr("CLEAR DIRECTION.")}</span>
+              <span>{tr("Tactile Indicator Stainless Steel")}</span>
             </h1>
+            <p className="hero-slogan">
+              {tr("TACTILE INDICATOR.")} {tr("SMALL DETAILS.")} {tr("CLEAR DIRECTION.")}
+            </p>
             <p className="hero-description">
               {tr(
                 "Bantu setiap langkah menemukan arah. Pilih tactile indicator stainless steel dengan pola garis untuk memandu dan pola titik untuk memberi peringatan. Belum yakin pilih yang mana? Mari diskusikan kebutuhan area Anda.",
