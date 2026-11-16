@@ -14,7 +14,7 @@ export const privacyDraft = {
       title: "Data pada fitur website",
       paragraphs: [
         "Frontend ini tidak menyediakan akun pengguna, pembayaran, formulir kontak, atau penyimpanan lead. Filter katalog, kata kunci pencarian, dan pilihan model dapat tersimpan pada URL halaman. Hindari memasukkan informasi pribadi ke kolom pencarian karena URL dapat tersimpan pada riwayat browser.",
-        "Pilihan varian dan gambar aktif dipakai sebagai state antarmuka. Source aplikasi tidak memasang analitik, cookie pelacakan, atau menyimpan preferensi ke localStorage. Penyedia hosting dapat memproses log teknis seperti alamat IP, waktu akses, dan URL untuk pengoperasian layanan. Masa simpan dan pengaturan log perlu dikonfirmasi oleh pengelola deployment.",
+        "Pilihan varian dan gambar aktif dipakai sebagai state antarmuka. Situs menggunakan Google Analytics 4 melalui Google Tag Manager untuk statistik pengunjung. Data yang dikumpulkan secara umum mencakup halaman yang dikunjungi, informasi perangkat, dan interaksi seperti klik tautan WhatsApp. Microsoft Clarity direncanakan untuk heatmap dan rekaman sesi, tetapi belum diaktifkan. Penyedia hosting juga dapat memproses log teknis seperti alamat IP, waktu akses, dan URL untuk pengoperasian layanan. Masa simpan dan pengaturan log perlu dikonfirmasi oleh pengelola deployment.",
       ],
     },
     {
@@ -29,7 +29,7 @@ export const privacyDraft = {
       id: "status-dokumen",
       title: "Status dokumen dan kontak",
       paragraphs: [
-        "Halaman ini adalah ringkasan implementasi untuk review, bukan kebijakan privasi final yang telah disetujui. Naskah resmi, identitas pengelola, kontak, dan ketentuan layanan pihak ketiga perlu disediakan atau disetujui klien sebelum publikasi.",
+        "Halaman ini adalah ringkasan implementasi untuk review, bukan kebijakan privasi final yang telah disetujui. Pemilik situs perlu meninjau teks ini sebelum rilis. Naskah resmi, identitas pengelola, kontak, dan ketentuan layanan pihak ketiga perlu disediakan atau disetujui klien sebelum publikasi.",
         "Informasi kontak yang telah dikonfirmasi akan tersedia pada halaman Kontak.",
       ],
     },
