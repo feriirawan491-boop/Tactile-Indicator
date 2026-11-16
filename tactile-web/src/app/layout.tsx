@@ -74,17 +74,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               inLanguage: ["id", "en"],
             }}
           />
-          {company.approved && company.legalName && (
-            <JsonLd
-              data={{
-                "@type": "Organization",
-                name: company.legalName,
-                url: siteUrl,
-                ...(company.email ? { email: company.email } : {}),
-                ...(company.address ? { address: company.address } : {}),
-              }}
-            />
-          )}
+          <JsonLd
+            data={{
+              "@type": "Organization",
+              ...(company.legalName ? { name: company.legalName } : {}),
+              url: siteUrl,
+              ...(company.logoUrl ? { logo: company.logoUrl } : {}),
+              ...(company.email ? { email: company.email } : {}),
+              ...(company.address ? { address: company.address } : {}),
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+6282214922270",
+                contactType: "sales",
+                areaServed: "ID",
+                availableLanguage: ["id", "en"],
+              },
+              // TODO: Add verified sameAs profiles when the owner supplies them.
+            }}
+          />
           <a href="#main-content" className="skip-link">
             {tr("Lewati ke konten")}
           </a>
