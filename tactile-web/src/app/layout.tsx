@@ -26,6 +26,9 @@ const baseMetadata: Metadata = {
   description:
     "Kenali tactile indicator, fungsi guiding dan warning, serta pertimbangan pemilihan untuk kebutuhan jalur Anda.",
   robots: { index: siteIndexable, follow: true },
+  verification: {
+    google: "qvXt70t08ssLIeofRgLBh55IVUYFPPPM-FWhboh4V-A",
+  },
 };
 export async function generateMetadata(): Promise<Metadata> {
   const { t: tr } = await getI18n();
