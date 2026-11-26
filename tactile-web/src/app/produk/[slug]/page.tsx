@@ -83,6 +83,13 @@ export default async function ProductDetail(props: Props) {
       <section className="product-detail">
         <div>
           <ProductGallery images={images} />
+          {product.imageKind === "supplied" && (
+            <p className="product-image-caption">
+              {tr(
+                "Gambar referensi menampilkan guiding block berpola garis di kanan dan warning block berpola titik di kiri.",
+              )}
+            </p>
+          )}
           {product.imageKind === "official" && (
             <p className="product-image-caption">
               {tr(
@@ -115,7 +122,9 @@ export default async function ProductDetail(props: Props) {
                   product.functionTypes?.length === 2
                     ? "Arah & peringatan sesuai komponen"
                     : product.functionType === "guiding"
-                      ? "Pemandu arah — batang memanjang"
+                      ? product.shape === "tiles"
+                        ? "Pemandu arah dengan garis timbul pada ubin"
+                        : "Pemandu arah — batang memanjang"
                       : "Peringatan — titik individual",
                 )}
               </dd>

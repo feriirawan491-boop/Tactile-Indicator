@@ -1,4 +1,8 @@
 import { referenceProducts, referenceMaterials } from "./reference-products.ts";
+import {
+  guidingBlockMaterials,
+  guidingBlockProducts,
+} from "./guiding-block-products.ts";
 import dataset from "./references/ablinox/products.json" with { type: "json" };
 import type { ProductCardView } from "../types/product";
 // Families organise similar catalogue listings, not a claim that technical models are identical.
@@ -76,7 +80,7 @@ const families: {
       "Stud dengan pola ulir. Tanyakan detail bentuk dan sistem pengikat untuk model pilihan Anda.",
   },
 ];
-export const coreProducts: ProductCardView[] = families.map((family) => {
+const stainlessSteelProducts: ProductCardView[] = families.map((family) => {
   const models = family.ids.map((id) => ({
     source: dataset.products[id - 1],
     product: referenceProducts[id - 1],
@@ -136,9 +140,15 @@ export const coreProducts: ProductCardView[] = families.map((family) => {
     ],
   };
 });
+export const coreProducts = [
+  ...stainlessSteelProducts,
+  ...guidingBlockProducts,
+];
 export const legacyProductRoutes = referenceProducts.map((product, index) => ({
   slug: product.slug,
-  target: coreProducts.find((f) => f.legacySlugs?.includes(product.slug))!.slug,
+  target: stainlessSteelProducts.find((f) =>
+    f.legacySlugs?.includes(product.slug),
+  )!.slug,
   model: `model-${String(index + 1).padStart(2, "0")}`,
 }));
-export const coreMaterials = referenceMaterials;
+export const coreMaterials = [...referenceMaterials, ...guidingBlockMaterials];

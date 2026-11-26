@@ -18,8 +18,8 @@ import { ProductGrid } from "@/components/product/ProductGrid";
 import type { SearchQuery } from "@/types/product";
 export async function generateMetadata() {
   return pageMetadata(
-    "Katalog Tactile Indicator Stainless Steel",
-    "Jelajahi pelat tactile, stud, dan strip stainless steel. Pilih pola guiding atau warning, bandingkan model, dan tanyakan spesifikasi serta penawaran.",
+    "Katalog Tactile Indicator",
+    "Bandingkan guiding block berbahan beton, granit, keramik, PVC / resin, dan karet serta pelat, stud, dan strip stainless steel.",
     "/produk",
   );
 }
@@ -59,7 +59,7 @@ export default async function Catalog({
         </h1>
         <p>
           {tr(
-            "Cari tactile indicator yang sesuai untuk area Anda. Jelajahi pelat siap susun, stud bulat, dan strip memanjang berbahan stainless steel. Gunakan filter untuk mempersempit pilihan, lalu cek detail model yang Anda suka.",
+            "Jelajahi ubin pemandu berbahan beton, granit, keramik, PVC / resin, dan karet serta pelat, stud, dan strip stainless steel. Gunakan filter fungsi, bentuk, dan material untuk menemukan produk yang sesuai.",
           )}
         </p>
         <div className="category-links">
@@ -83,7 +83,7 @@ export default async function Catalog({
       </section>
       <p className="category-copy">
         {tr(
-          "Sudah menemukan pilihan? Tanyakan ukuran, grade material, dan ketersediaan model melalui WhatsApp sebelum memesan.",
+          "Sudah menemukan pilihan? Tanyakan ukuran, cara pemasangan, dan ketersediaan produk melalui WhatsApp sebelum memesan.",
         )}
       </p>
       <ProductChooser demo={demo} materials={materials} />

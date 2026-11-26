@@ -60,7 +60,9 @@ export async function FunctionPageView({
           <small className="media-caption">
             {tr(
               products[0]?.image
-                ? "ILUSTRASI AI · BUKAN FOTO PRODUK RESMI"
+                ? products[0].imageKind === "generated"
+                  ? "ILUSTRASI AI · BUKAN FOTO PRODUK RESMI"
+                  : "GAMBAR REFERENSI PRODUK"
                 : "DIAGRAM POLA · BUKAN FOTO PRODUK",
             )}
           </small>
@@ -161,7 +163,11 @@ export async function MaterialPageView({
           <div>
             <ProductImage image={products[0].image} />
             <small className="media-caption">
-              {tr("ILUSTRASI AI · BUKAN SPESIFIKASI PRODUK RESMI")}
+              {tr(
+                products[0].imageKind === "generated"
+                  ? "ILUSTRASI AI · BUKAN SPESIFIKASI PRODUK RESMI"
+                  : "GAMBAR REFERENSI PRODUK",
+              )}
             </small>
           </div>
         )}

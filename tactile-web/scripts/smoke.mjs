@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { writeFile, mkdir } from "node:fs/promises";
+import { articles } from "../src/data/articles.ts";
 const base = new URL(process.env.BASE_URL || "http://127.0.0.1:3000");
 assert.ok(
   ["127.0.0.1", "localhost", "[::1]"].includes(base.hostname),
@@ -17,6 +18,12 @@ const queue = [
 const visited = new Set(),
   results = [],
   canonicals = new Map();
+const draftPaths = new Set([
+  "/kebijakan-privasi",
+  ...articles
+    .filter((article) => !article.approved)
+    .map(({ slug }) => `/panduan/${slug}`),
+]);
 const decode = (s) =>
   s
     .replaceAll("&amp;", "&")
@@ -46,8 +53,7 @@ while (queue.length) {
   assert.ok(meta(html, "description"), `${route}: description`);
   assert.ok(
     meta(html, "robots")?.includes(
-      new URL(route, base).pathname.startsWith("/panduan/") ||
-        route === "/kebijakan-privasi" ||
+      draftPaths.has(new URL(route, base).pathname) ||
         process.env.EXPECT_NOINDEX === "true"
         ? "noindex"
         : "index",
@@ -91,7 +97,7 @@ while (queue.length) {
     assert.ok(!html.includes("mailto:"), "No unapproved email");
   }
   if (route.includes("fungsi=guiding&bentuk=tiles"))
-    assert.equal([...html.matchAll(/class="product-card"/g)].length, 1);
+    assert.equal([...html.matchAll(/class="product-card"/g)].length, 6);
   if (route.includes("fungsi=guiding&bentuk=studs"))
     assert.ok(html.includes("Tidak ada produk yang sesuai."));
   for (const [, href] of html.matchAll(/<a\b[^>]*href="([^"]+)"/g)) {
@@ -122,7 +128,6 @@ for (const route of [
   "/produk/tidak-ada",
   "/produk/fungsi/tidak-ada",
   "/produk/material/tidak-ada",
-  "/produk/material/beton",
   "/produk/contoh-beton-guiding",
   "/panduan/tidak-ada",
 ]) {

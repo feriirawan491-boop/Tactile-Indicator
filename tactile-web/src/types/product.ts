@@ -25,7 +25,7 @@ export interface ProductCardView {
     confirmBeforeOrder: string[];
   };
   dataKind?: "reference";
-  imageKind?: "generated" | "official";
+  imageKind?: "generated" | "official" | "supplied";
   gallery?: { src: string; alt: string }[];
   specs?: { label: string; value: string }[];
   variants?: {

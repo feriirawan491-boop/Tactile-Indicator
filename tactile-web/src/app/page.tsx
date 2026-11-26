@@ -205,15 +205,18 @@ export default async function Home() {
             03 /
           </span>
           <div>
-            <h3>{tr("Satu material, beragam pilihan bentuk.")}</h3>
+            <h3>{tr("Pilihan material Guiding Block")}</h3>
             <p>
               {tr(
-                "Pilih pelat tactile, stud bulat, atau strip memanjang sesuai rancangan jalur Anda. Pilihan grade 304 atau 316, ukuran, dan finishing berbeda pada setiap model. Kami bantu Anda membahas detailnya sebelum memesan.",
+                "Bandingkan ubin pemandu beton, granit, keramik, PVC / resin, dan karet. Pilihan stainless steel juga tersedia dalam bentuk pelat dan strip pemandu.",
               )}
             </p>
           </div>
-          <Link className="text-link" href={localizeHref("/produk")}>
-            {tr("Lihat pilihan produk")}
+          <Link
+            className="text-link"
+            href={localizeHref("/produk/fungsi/guiding-block")}
+          >
+            {tr("Lihat pilihan Guiding Block")}
             <ArrowUpRight size={18} />
           </Link>
         </div>

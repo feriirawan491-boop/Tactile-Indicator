@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import {
+  coreMaterials,
   coreProducts,
   legacyProductRoutes,
 } from "../src/data/core-products.ts";
@@ -11,11 +12,14 @@ import { translateText } from "../src/i18n/core.ts";
 import { execFileSync } from "node:child_process";
 
 test("nine product families preserve all 37 source models exactly once", () => {
-  assert.equal(coreProducts.length, 9);
-  const variants = coreProducts.flatMap((p) => p.variants);
+  const stainlessSteelProducts = coreProducts.filter(
+    (p) => p.materialSlug === "stainless-steel",
+  );
+  assert.equal(stainlessSteelProducts.length, 9);
+  const variants = stainlessSteelProducts.flatMap((p) => p.variants);
   assert.equal(variants.length, 37);
   assert.equal(new Set(variants.map((v) => v.id)).size, 37);
-  for (const product of coreProducts) {
+  for (const product of stainlessSteelProducts) {
     assert.ok(product.name.length <= 50);
     assert.notEqual(translateText(product.name, "en"), product.name);
     assert.equal(product.approved, false);
@@ -85,12 +89,40 @@ test("grade and finish filters match the same model, sort does not mutate source
   );
 });
 test("source photographs are real local WebP images", async () => {
-  for (const v of coreProducts.flatMap((p) => p.variants)) {
+  const images = coreProducts.flatMap((p) => [
+    p.image,
+    ...(p.variants ?? []).map((v) => v.image),
+  ]);
+  for (const image of images) {
     const bytes = await readFile(
-      new URL("../public" + v.image.src, import.meta.url),
+      new URL("../public" + image.src, import.meta.url),
     );
     assert.equal(bytes.toString("ascii", 0, 4), "RIFF");
     assert.equal(bytes.toString("ascii", 8, 12), "WEBP");
+  }
+});
+test("each new guiding block is listed under its own material", () => {
+  const materials = coreMaterials.map((m) => m.slug);
+  for (const material of ["beton", "granit", "keramik", "pvc-resin", "karet"]) {
+    const guiding = filterProducts(
+      coreProducts,
+      normalizeFilters(
+        { fungsi: "guiding", material, bentuk: "tiles" },
+        materials,
+      ),
+    );
+    assert.equal(guiding.length, 1, material);
+    const [product] = guiding;
+    assert.equal(product.slug, `guiding-block-${material}`);
+    assert.equal(translateText(product.name, "en"), product.englishName);
+    assert.equal(product.approved, false);
+    assert.equal(
+      filterProducts(
+        coreProducts,
+        normalizeFilters({ fungsi: "warning", material }, materials),
+      ).length,
+      0,
+    );
   }
 });
 test("production ignores localhost origins and suppresses demo query flags", () => {

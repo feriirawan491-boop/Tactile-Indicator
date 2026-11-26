@@ -3,7 +3,7 @@ export const materialEducation: Record<
   { appearance: string; description: string; checks: string[] }
 > = {
   beton: {
-    appearance: "Abu-abu dengan tekstur berpori pada ilustrasi.",
+    appearance: "Kuning dengan tekstur berbutir pada gambar referensi.",
     description:
       "Contoh bentuk ubin modular beton pracetak. Visual memperlihatkan bidang persegi dengan pola timbul menyatu pada permukaan, agar bentuk guiding dan warning mudah dibandingkan.",
     checks: [
